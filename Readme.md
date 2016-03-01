@@ -1,7 +1,7 @@
 ﻿# Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Маргарита Мунтанион](https://up.htmlacademy.ru/adaptive/6/user/64785).
-* Наставник: [Александр Сенченко].
+* Наставник: Александр Сенченко.
 
 ---
 
