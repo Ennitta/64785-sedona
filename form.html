@@ -30,7 +30,7 @@
                 <p class="intro__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
             </section>
             <form class="form" action="/echo" method="post">
-                <section class="form__login">
+                <div class="form__login">
                     <div class="form-title">Представьтесь, пожалуйста:</div>
                     <label for="name">Имя:
                         <input type="text" name="name" id="name">
@@ -41,8 +41,8 @@
                     <label for="middle-name">Отчество:
                         <input type="text" name="middle-name" id="middle-name">
                     </label>
-                </section>
-                <section class="form__contacts">
+                </div>
+                <div class="form__contacts">
                     <div class="form__title">Контакная информация:</div>
                     <label for="tel">Контактный телефон:
                         <input type="tel" name="tel" id="tel" placeholder="Введите телефон">
@@ -51,8 +51,8 @@
                     <label for="email">Электронная почта:
                         <input type="email" name="email" id="email" placeholder="Введите e-mail">
                     </label>
-                </section>
-                <section class="form__impression">
+                </div>
+                <div class="form__impression">
                     <div class="form__title">Ваше общее впечатление:</div>
                     <ul class="form__impression-list">
                         <li>
@@ -65,8 +65,8 @@
                             <input type="radio" name="impres" value="" id="rb-3"><label for="rb-3">Затрудняюсь ответить</label>
                         </li>
                     </ul>
-                </section>
-                <section class="form__attractions">
+                </div>
+                <div class="form__attractions">
                     <div class="form__title">Посещенные достопримечательности:</div>
                     <ul class="form__attractions-list">
                         <li>
@@ -86,13 +86,13 @@
                            <label for="chb-4">Красные скалы</label>
                         </li>
                     </ul>
-                </section>
-                <section class="form__emotions">
+                </div>
+                <div class="form__emotions">
                     <div class="form-title">Опишите свои эмоции:</div>
                     <label for="textarea">
                         <textarea placeholder="Опишите подробно все свои восторги " name="textarea" id="textarea"></textarea>
                     </label>
-                </section>
+                </div>
                 <button type="submit">Отправить отзыв</button>
             </form>
         </div>
