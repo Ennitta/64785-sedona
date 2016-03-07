@@ -32,25 +32,22 @@
             <form class="form" action="/echo" method="post">
                 <div class="form__login">
                     <div class="form-title">Представьтесь, пожалуйста:</div>
-                    <label for="name">Имя:
-                        <input type="text" name="name" id="name">
-                    </label>
-                    <label for="surname">Фамилия:
-                        <input type="text" name="surname" id="surname">
-                    </label>
-                    <label for="middle-name">Отчество:
-                        <input type="text" name="middle-name" id="middle-name">
-                    </label>
+                    <label for="name">Имя:</label>
+                    <input type="text" name="name" id="name">
+                    <label for="surname">Фамилия:</label>
+                    <input type="text" name="surname" id="surname">
+                    <label for="middle-name">Отчество:</label>
+                    <input type="text" name="middle-name" id="middle-name">
                 </div>
                 <div class="form__contacts">
                     <div class="form__title">Контакная информация:</div>
-                    <label for="tel">Контактный телефон:
-                        <input type="tel" name="tel" id="tel" placeholder="Введите телефон">
-                    </label>
-                  <div class="form__error">Ошибка, перепроверьте номер</div>
-                    <label for="email">Электронная почта:
-                        <input type="email" name="email" id="email" placeholder="Введите e-mail">
-                    </label>
+                    <label for="tel">Контактный телефон:</label>
+                    <div class="form__icon">
+                    	<input type="tel" name="tel" id="tel" placeholder="Введите телефон">
+                    </div>
+                    <div class="form__error">Ошибка, перепроверьте номер</div>
+                    <label for="email">Электронная почта:</label>
+                    <input type="email" name="email" id="email" placeholder="Введите e-mail">
                 </div>
                 <div class="form__impression">
                     <div class="form__title">Ваше общее впечатление:</div>
@@ -89,9 +86,8 @@
                 </div>
                 <div class="form__emotions">
                     <div class="form-title">Опишите свои эмоции:</div>
-                    <label for="textarea">
-                        <textarea placeholder="Опишите подробно все свои восторги " name="textarea" id="textarea"></textarea>
-                    </label>
+                    <label for="textarea"></label>
+                    <textarea placeholder="Опишите подробно все свои восторги " name="textarea" id="textarea"></textarea>
                 </div>
                 <button type="submit">Отправить отзыв</button>
             </form>
