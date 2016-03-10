@@ -1,0 +1,31 @@
+.interested {
+  margin: 20px;
+
+  &__title {
+    @include font-bold;
+    font-size: 21px;
+    line-height: 26px;
+  }
+
+  p {
+    @include font-normal;
+    color: $c_gray;
+    line-height: 24px;
+  }
+
+  &__motel {
+    @include font-bold;
+    font-size: 21px;
+    line-height: 26px;
+    background-color: $c_base;
+
+    a {
+      @include tdn;
+      color: $c_white;
+    }
+  }
+
+  &__map {
+
+  }
+}

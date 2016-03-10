@@ -1,0 +1,37 @@
+.reasons {
+
+  &__wrapper {
+
+    &--dif {
+      background-color: $bg_gray;
+    }
+  }
+
+  &__item {
+    background-color: $c_base;
+    color: $c_white;
+  }
+
+  &__title {
+    font-size: 21px;
+  }
+
+  &__number {
+
+  }
+
+  &__image {
+
+  }
+
+  &__lists {
+    @include list-clear;
+  }
+
+  &__list {
+
+    &--sprite {
+
+    }
+  }
+}

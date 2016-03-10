@@ -1,0 +1,34 @@
+// Скрываем текст
+@mixin hide-text() {
+  font-size: 0;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+// Обнуляем списки
+@mixin list-clear() {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+//флексбокс
+@mixin flex-column() {
+  display: flex;
+  flex-direction: column;
+}
+// font
+@mixin font-bold() {
+  font-family: $ff_base;
+  font-size: $fz_large;
+  font-weight: $fw_bold;
+}
+@mixin font-normal() {
+  font-family: $ff_base;
+  font-size: $fz_base;
+  font-weight: $fw_normal;
+}
+//без подчеркивания
+@mixin tdn() {
+  text-decoration: none;
+}

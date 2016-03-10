@@ -1,0 +1,44 @@
+.form {
+
+  &__login {
+
+  }
+
+  &__title {
+    @include font-bold;
+    font-size: $fz_large;
+    line-height: $lh_base;
+  }
+
+  &__contacts {
+
+  }
+
+  &__icon {
+
+  }
+
+  &__error {
+
+  }
+
+  &__impression {
+
+  }
+
+  &__impression-list {
+    @include list-clear;
+  }
+
+  &__attractions {
+
+  }
+
+  &__attractions-list {
+    @include list-clear;
+  }
+
+  &__emotions {
+
+  }
+}
