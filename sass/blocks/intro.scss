@@ -5,12 +5,10 @@
     @include font-bold;
     line-height: $lh_base;
     margin-bottom: 30px;
-    text-align: center;
   }
 
   &__text {
     @include font-normal;
-    text-align: center;
     color: $c_gray;
   }
 }

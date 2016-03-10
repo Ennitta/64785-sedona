@@ -1,0 +1,22 @@
+.page-footer {
+
+  &__wrapper {
+
+  }
+
+  &__visit {
+    @include font-bold;
+    @include tdn;
+    font-size: 21px;
+    line-height: 26px;
+    color: $c_black;
+  }
+
+  &__social {
+
+  }
+
+  &__copyright {
+
+  }
+}
