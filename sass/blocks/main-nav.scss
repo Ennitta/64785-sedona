@@ -1,0 +1,34 @@
+.main-nav{
+
+  &__wrapper{
+    /*текст*/
+
+    &--close{
+      /*текст*/
+    }
+  }
+
+  &__items{
+    background-color: $c_base;
+    @include list-clear;
+    @include flex-column;
+    @include font-bold;
+    align-items: center;
+  }
+
+  &__item{
+    line-height: 40px;
+
+    a {
+      @include tdn;
+      color: $c_white;
+    }
+  }
+  &__toggle{
+    @include hide-text;
+
+    &--close{
+      /*текст*/
+    }
+  }
+}
