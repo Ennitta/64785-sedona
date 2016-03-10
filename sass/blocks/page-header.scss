@@ -1,0 +1,15 @@
+.page-header{
+  background: rgba(0,0,0,.25);
+
+  &__menu-toggle {
+    @include hide-text;
+
+    &--close {
+      /*текст*/
+    }
+  }
+
+  &__logo{
+    /*текст*/
+  }
+}
