@@ -1,6 +1,10 @@
 .intro {
   margin: 20px;
 
+  &--hide {
+
+  }
+
   &__title {
     @include font-bold;
     line-height: $lh_base;
