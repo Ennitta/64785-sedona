@@ -1,0 +1,20 @@
+@import "global/fonts";
+@import "lib/normalize.css";
+@import "variables";
+@import "mixins";
+
+//global
+@import "global/base";
+
+//blocks
+@import "blocks/page-header";
+@import "blocks/main-nav";
+@import "blocks/content";
+@import "blocks/intro";
+@import "blocks/reasons";
+@import "blocks/form";
+@import "blocks/gallery";
+@import "blocks/interested";
+@import "blocks/video";
+@import "blocks/page-footer";
+@import "blocks/social-links";

@@ -1,0 +1,18 @@
+.intro {
+  margin: 20px;
+
+  &--hide {
+
+  }
+
+  &__title {
+    @include font-bold;
+    line-height: $lh_base;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    @include font-normal;
+    color: $c_gray;
+  }
+}
