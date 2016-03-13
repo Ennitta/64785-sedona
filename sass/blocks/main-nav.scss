@@ -12,7 +12,6 @@
     background-color: $c_base;
     @include list-clear;
     @include flex-column;
-    @include font-bold;
     align-items: center;
   }
 
