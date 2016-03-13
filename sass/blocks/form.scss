@@ -5,7 +5,6 @@
   }
 
   &__title {
-    @include font-bold;
     font-size: $fz_large;
     line-height: $lh_base;
   }

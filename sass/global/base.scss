@@ -3,9 +3,14 @@
   padding: 0;
 }
 .wrapper {
-  width: 320px;
-  margin: auto;
+  font-family: $ff_base;
+  font-size: 14px;
+  line-height: 26px;
+
   text-align: center;
   text-transform: uppercase;
-  font-family: $ff_base;
 }
+/*
+@media (max-width: 767px) {
+  width: 320px;
+}*/

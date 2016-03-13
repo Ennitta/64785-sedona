@@ -1,7 +1,4 @@
 $ff_base: "PT Sans", Arial, sans-serif;
-$fz_base: 14px;
-$fz_large: 18px;
-$lh_base: 26px;
 
 $c_base: #81b3d2;
 $c_white: #ffffff;
@@ -9,4 +6,7 @@ $c_black: #000000;
 $c_gray: #333333;
 $bg_gray: #eeeeee;
 
+$mobile-width: ~"(max-width: 767px)";
+$tablet-width: ~"(min-width: 768px)";
+$desctop-width: ~"(min-width: 1200px)";
 
