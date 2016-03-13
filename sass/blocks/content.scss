@@ -1,7 +1,22 @@
 .content {
 
   &__welcome {
+    margin-bottom: 35px;
 
+    img {
+      width: 320px;
+      height: 390px;
+      margin-top: -39px;
+
+      @media #{$tablet-width} {
+        width:768px;
+        height: 520px;
+        margin-top: 10px;
+      }
+      @media #{$desctop-width} {
+        width: 1200px;
+      }
+    }
   }
 
   &__mini-welcome {
