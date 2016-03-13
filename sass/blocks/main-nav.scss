@@ -12,19 +12,51 @@
     background-color: $c_base;
     @include list-clear;
     @include flex-column;
-    align-items: center;
+
+    @media #{$tablet-width} {
+      flex-direction: row;
+      justify-content: space-around;
+      /*background-color: $c_white;*/
+    }
   }
 
   &__item{
+    font-size: 18px;
     line-height: 40px;
+    font-weight: 700;
+
+    @media #{$tablet-width} {
+      margin-left: 25px;
+
+      &:nth-child(2) {
+      margin-right: 120px;
+      }
+    }
+    @media #{$desctop-width} {
+      margin-left: 0;
+    }
 
     a {
-      @include tdn;
+      display: block;
       color: $c_white;
+      padding: 8px;
+      @include tdn;
+
+      @media #{$tablet-width} {
+        font-size: 14px;
+        line-height: 26px;
+        padding: 10px;
+        color: $c_black;
+      }
     }
+      @media #{$desctop-width} {
+        font-size: 14px;
+        line-height: 26px;
+        color: $c_black;
+      }
   }
   &__toggle{
-    @include hide-text;
+    display: none;
 
     &--close{
       /*текст*/
