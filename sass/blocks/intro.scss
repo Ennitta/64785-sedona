@@ -11,8 +11,8 @@
 
   &__title {
     width: 260px;
-    margin-left: 30px;
     font-size: 18px;
+    margin-left: 30px;
     margin-bottom: 26px;
 
     @media #{$tablet-width} {
@@ -26,6 +26,8 @@
   }
 
   &__text {
+    margin-left: 20px;
+    margin-right: 20px;
     color: $c_gray;
   }
 }
