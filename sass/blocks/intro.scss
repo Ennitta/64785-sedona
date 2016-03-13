@@ -1,12 +1,28 @@
 .intro {
-  margin: 20px;
+  margin-bottom: 42px;
+
+  @media #{$tablet-width} {
+    margin-bottom: 50px;
+  }
 
   &--hide {
 
   }
 
   &__title {
-    margin-bottom: 30px;
+    width: 260px;
+    margin-left: 30px;
+    font-size: 18px;
+    margin-bottom: 26px;
+
+    @media #{$tablet-width} {
+      font-size: 21px;
+      width: 445px;
+      margin-left: 160px;
+    }
+    @media #{$desctop-width} {
+      margin-left: 375px;
+    }
   }
 
   &__text {

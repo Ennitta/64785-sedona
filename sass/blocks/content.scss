@@ -1,7 +1,11 @@
 .content {
 
   &__welcome {
-    margin-bottom: 35px;
+    margin-bottom: 33px;
+
+    @media #{$tablet-width} {
+      margin-bottom: 40px;
+    }
 
     img {
       width: 320px;
