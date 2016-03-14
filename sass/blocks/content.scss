@@ -19,11 +19,30 @@
       }
       @media #{$desctop-width} {
         width: 1200px;
+        height: 515px;
       }
     }
   }
 
   &__mini-welcome {
+    margin-bottom: 30px;
 
+    @media #{$tablet-width} {
+      margin-bottom: 50px;
+    }
+    img {
+      width: 320px;
+      height: 160px;
+      margin-top: -30px;
+
+      @media #{$tablet-width} {
+        width: 768px;
+        height: 290px;
+      }
+      @media #{$desctop-width} {
+        width: 1200px;
+        height: 300px;
+      }
+    }
   }
 }
