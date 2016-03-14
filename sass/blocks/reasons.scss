@@ -1,35 +1,104 @@
 .reasons {
-  width: 768px;
   display: flex;
-  flex-wrap: wrap;
 
-  &__wrapper {
-    outline: 1px solid black;
+  @media #{$mobile-width} {
+    flex-direction: column;
+}
+
+  @media #{$tablet-width} {
     display: flex;
+    flex-wrap: wrap;
+  }
+  @media #{$desctop-width} {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__wrapper {
 
-    &--dif {
+    @media #{$tablet-width} {
+      display: flex;
+    }
+    @media #{$desctop-width} {
+      display: flex;
+    }
+    @media #{$tablet-width} {
+      &:first-child {
+        flex-wrap: wrap;
+      }
+      @media #{$desctop-width} {
+        &:first-child {
+        flex-wrap: wrap;
+      }
+      }
+    }
+    /*так можно???*/
+    @media #{$tablet-width} {
+      &:nth-child(2) .reasons__image {
+        order: -1;
+      }
+    }
+    @media #{$desctop-width} {
+      &:nth-child(2) .reasons__image {
+        order: -1;
+      }
     }
   }
   &__item {
-    outline: 1px solid black;
-    width: 256px;
-  }
+    height: 190px;
+    background-color: $c_base;
+    color: $c_white;
+
+    &--dif {
+      height: 170px;
+      background-color: $bg_gray;
+      color: $c_black;
+    }
+
+    @media #{$tablet-width} {
+      width: 256px;
+      height: 256px;
+    }
+    @media #{$desctop-width} {
+      width: 400px;
+      height: 256px;
+    }
+}
   &__title {}
   &__number {}
   &__image {
-    width: 512px;
-    outline: 1px solid black;
-  }
-  &__lists {
-    display: flex;
-    @include list-clear;
-    outline: 1px solid black;
-  }
-  &__list {
-    width: 256px;
-    outline: 1px solid black;
-  }
+    width: auto;
+    height: 256px;
+
+    @media #{$tablet-width} {
+      width: 512px;
+    }
+    @media #{$desctop-width} {
+      width: 800px;
+    }
 }
-.reasons__wrapper:first-child {
-  flex-wrap: wrap;
+  &__lists {
+    @include list-clear;
+
+    @media #{$tablet-width} {
+      display: flex;
+    }
+    @media #{$desctop-width} {
+      display: flex;
+    }
+}
+  &__list {
+    height: 110px;
+    text-align: left;
+
+    @media #{$tablet-width} {
+      width: 256px;
+      height: 330px;
+      text-align: center;
+    }
+    @media #{$desctop-width} {
+      width: 400px;
+      height: 330px;
+      text-align: center;
+    }
+  }
 }
