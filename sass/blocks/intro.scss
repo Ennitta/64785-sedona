@@ -1,5 +1,5 @@
 .intro {
-  margin-bottom: 42px;
+  margin-bottom: 30px;
 
   @media #{$tablet-width} {
     margin-bottom: 50px;
@@ -12,16 +12,13 @@
   &__title {
     width: 260px;
     font-size: 18px;
-    margin-left: 30px;
+    margin: 0 auto;
+    /*margin-left: 30px;*/
     margin-bottom: 26px;
 
     @media #{$tablet-width} {
       font-size: 21px;
       width: 445px;
-      margin-left: 160px;
-    }
-    @media #{$desctop-width} {
-      margin-left: 375px;
     }
   }
 

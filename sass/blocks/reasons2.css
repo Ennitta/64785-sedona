@@ -1,0 +1,70 @@
+.reasons {
+  @include flex-column;
+
+  &__wrapper {
+    @media #{$tablet-width} {
+      display: flex;
+      flex-wrap: wrap;
+
+  }
+
+    &--dif {
+      background-color: $bg_gray;
+    }
+  }
+
+  &__item {
+    background-color: $c_base;
+    color: $c_white;
+
+    p {
+      line-height: 21px;
+      padding-top: 15px;
+      padding-bottom: 40px;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    padding-top: 55px;
+
+    @media #{$tablet-width}  {
+      padding-top: 0;
+    }
+  }
+
+  &__number {
+
+  }
+
+  &__image {
+
+  }
+
+  &__lists {
+    text-align: left;
+    @include list-clear;
+
+    @media #{$tablet-width} {
+      display: flex;
+}
+  }
+
+  &__list {
+    margin: 20px;
+    margin-bottom: 27px;
+    padding-left: 50px;
+
+    &--sprite {
+
+    }
+    b {
+      font-size: 18px;
+    }
+
+    div {
+      line-height: 21px;
+      margin-top: 13px;
+    }
+  }
+}

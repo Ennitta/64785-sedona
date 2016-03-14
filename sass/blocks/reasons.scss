@@ -1,37 +1,35 @@
 .reasons {
+  width: 768px;
+  display: flex;
+  flex-wrap: wrap;
 
   &__wrapper {
+    outline: 1px solid black;
+    display: flex;
 
     &--dif {
-      background-color: $bg_gray;
     }
   }
-
   &__item {
-    background-color: $c_base;
-    color: $c_white;
+    outline: 1px solid black;
+    width: 256px;
   }
-
-  &__title {
-    font-size: 21px;
-  }
-
-  &__number {
-
-  }
-
+  &__title {}
+  &__number {}
   &__image {
-
+    width: 512px;
+    outline: 1px solid black;
   }
-
   &__lists {
+    display: flex;
     @include list-clear;
+    outline: 1px solid black;
   }
-
   &__list {
-
-    &--sprite {
-
-    }
+    width: 256px;
+    outline: 1px solid black;
   }
+}
+.reasons__wrapper:first-child {
+  flex-wrap: wrap;
 }
