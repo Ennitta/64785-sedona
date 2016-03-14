@@ -12,11 +12,22 @@
     flex-wrap: wrap;
   }
 
+  @media #{$desctop-width} {
+    width: 960px;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+
   &__login {
 
     @media #{$tablet-width} {
       width: 320px;
       height: 355px;
+    }
+
+    @media #{$desctop-width} {
+      width: 400px;
+      margin-left: 160px;
     }
     label {
       margin-right: 10px;
