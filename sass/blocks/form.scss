@@ -2,7 +2,6 @@
   text-align: left;
   padding-left: 20px;
   margin-bottom: 50px;
-  outline: 1px solid black;
 
   @media #{$tablet-width} {
     width: 648px;
@@ -50,7 +49,6 @@
 
     @media #{$tablet-width} {
       font-size: 21px;
-      outline: 1px solid black;
 }
   }
 

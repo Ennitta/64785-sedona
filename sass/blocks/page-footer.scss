@@ -2,6 +2,15 @@
 
   &__wrapper {
 
+    @media #{$tablet-width} {
+      width: 648px;
+      display: flex;
+      justify-content: space-around;
+      margin: 20px auto;
+    }
+    @media #{$desctop-width} {
+      width: 960px;
+    }
   }
 
   &__visit {
