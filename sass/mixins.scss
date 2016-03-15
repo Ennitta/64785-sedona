@@ -17,17 +17,6 @@
   display: flex;
   flex-direction: column;
 }
-// font
-@mixin font-bold() {
-  font-family: $ff_base;
-  font-size: $fz_large;
-  font-weight: $fw_bold;
-}
-@mixin font-normal() {
-  font-family: $ff_base;
-  font-size: $fz_base;
-  font-weight: $fw_normal;
-}
 //без подчеркивания
 @mixin tdn() {
   text-decoration: none;

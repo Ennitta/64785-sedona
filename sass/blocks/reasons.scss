@@ -1,37 +1,104 @@
 .reasons {
+  display: flex;
 
+  @media #{$mobile-width} {
+    flex-direction: column;
+}
+
+  @media #{$tablet-width} {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media #{$desctop-width} {
+    display: flex;
+    flex-wrap: wrap;
+  }
   &__wrapper {
 
-    &--dif {
-      background-color: $bg_gray;
+    @media #{$tablet-width} {
+      display: flex;
+    }
+    @media #{$desctop-width} {
+      display: flex;
+    }
+    @media #{$tablet-width} {
+      &:first-child {
+        flex-wrap: wrap;
+      }
+      @media #{$desctop-width} {
+        &:first-child {
+        flex-wrap: wrap;
+      }
+      }
+    }
+    /*так можно???*/
+    @media #{$tablet-width} {
+      &:nth-child(2) .reasons__image {
+        order: -1;
+      }
+    }
+    @media #{$desctop-width} {
+      &:nth-child(2) .reasons__image {
+        order: -1;
+      }
     }
   }
-
   &__item {
+    height: 190px;
     background-color: $c_base;
     color: $c_white;
-  }
 
-  &__title {
-    font-size: 21px;
-  }
+    &--dif {
+      height: 170px;
+      background-color: $bg_gray;
+      color: $c_black;
+    }
 
-  &__number {
-
-  }
-
+    @media #{$tablet-width} {
+      width: 256px;
+      height: 256px;
+    }
+    @media #{$desctop-width} {
+      width: 400px;
+      height: 256px;
+    }
+}
+  &__title {}
+  &__number {}
   &__image {
+    width: auto;
+    height: 256px;
 
-  }
-
+    @media #{$tablet-width} {
+      width: 512px;
+    }
+    @media #{$desctop-width} {
+      width: 800px;
+    }
+}
   &__lists {
     @include list-clear;
-  }
 
+    @media #{$tablet-width} {
+      display: flex;
+    }
+    @media #{$desctop-width} {
+      display: flex;
+    }
+}
   &__list {
+    height: 110px;
+    text-align: left;
 
-    &--sprite {
-
+    @media #{$tablet-width} {
+      width: 256px;
+      height: 330px;
+      text-align: center;
+    }
+    @media #{$desctop-width} {
+      width: 400px;
+      height: 330px;
+      text-align: center;
     }
   }
 }
