@@ -11,13 +11,11 @@ body {
   text-transform: uppercase;
 }
 .wrapper {
-  width: 320px;
-  margin: 0 auto;
 
-  @media #{$tablet-width} {
+  /*@media #{$tablet-width} {
     width: 768px;
   }
   @media #{$desctop-width} {
     width: 1200px;
-  }
+  }*/
 }

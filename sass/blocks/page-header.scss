@@ -6,11 +6,8 @@
     @media #{$tablet-width} {
       position: absolute;
       top: 0;
-      right: 43.3%;
-
-    @media #{$desctop-width} {
-      right: 46%;
-    }
+      left: 50%;
+      transform: translateX(-50%);
   }
 
     img {

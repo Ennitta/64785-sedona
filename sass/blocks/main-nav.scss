@@ -1,8 +1,16 @@
 .main-nav{
   position: relative;
+  width: auto;
   background-color: $c_base;
 
+  @media #{$tablet-width} {
+    background-color: $c_white;
+  }
   &__wrapper{
+
+    @media #{$tablet-width} {
+      @include container-fluid;
+    }
 
     &--close{
     }
@@ -14,9 +22,6 @@
 
     @media #{$tablet-width} {
       flex-direction: row;
-      margin-left: 36px;
-      margin-right: 13px;
-      /*background-color: $c_white;*/
     }
   }
 
@@ -24,17 +29,11 @@
     font-size: 18px;
     line-height: 40px;
     font-weight: 700;
-    outline: 1px solid black;
 
     @media #{$tablet-width} {
-      /*margin-left: 25px;*/
-
+      width: 20%;
       &:nth-child(2) {
         margin-right: auto;
-        margin-left: 52px;
-      }
-      &:nth-child(3) {
-        margin-right: 25px;
       }
     }
     @media #{$desctop-width} {
@@ -54,6 +53,8 @@
         line-height: 26px;
         padding: 13px;
         color: $c_black;
+        border-top: none;
+        border-bottom: none;
       }
     }
       @media #{$desctop-width} {

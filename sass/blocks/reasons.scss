@@ -6,11 +6,11 @@
 }
 
   @media #{$tablet-width} {
-    display: flex;
+    /*display: flex;*/
     flex-wrap: wrap;
   }
   @media #{$desctop-width} {
-    display: flex;
+    /*display: flex;*/
     flex-wrap: wrap;
   }
   &__wrapper {
@@ -44,9 +44,10 @@
     }
   }
   &__item {
-    height: 190px;
+    height: 150px;
     background-color: $c_base;
     color: $c_white;
+    padding-top: 57px;
 
     &--dif {
       height: 170px;
@@ -56,17 +57,23 @@
 
     @media #{$tablet-width} {
       width: 256px;
-      height: 256px;
+      height: 199px;
     }
     @media #{$desctop-width} {
       width: 400px;
-      height: 256px;
+      height: 199px;
     }
 }
-  &__title {}
-  &__number {}
+  &__title {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+  &__number {
+    margin-bottom: 10px;
+}
   &__image {
-    width: auto;
     height: 256px;
 
     @media #{$tablet-width} {
@@ -74,6 +81,9 @@
     }
     @media #{$desctop-width} {
       width: 800px;
+    }
+    img {
+      width: 100%;
     }
 }
   &__lists {
