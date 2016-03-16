@@ -1,21 +1,21 @@
 .main-nav{
+  position: relative;
+  background-color: $c_base;
 
   &__wrapper{
-    /*текст*/
 
     &--close{
-      /*текст*/
     }
   }
 
   &__items{
-    background-color: $c_base;
     @include list-clear;
     @include flex-column;
 
     @media #{$tablet-width} {
       flex-direction: row;
-      justify-content: space-around;
+      margin-left: 36px;
+      margin-right: 13px;
       /*background-color: $c_white;*/
     }
   }
@@ -24,12 +24,17 @@
     font-size: 18px;
     line-height: 40px;
     font-weight: 700;
+    outline: 1px solid black;
 
     @media #{$tablet-width} {
-      margin-left: 25px;
+      /*margin-left: 25px;*/
 
       &:nth-child(2) {
-      margin-right: 120px;
+        margin-right: auto;
+        margin-left: 52px;
+      }
+      &:nth-child(3) {
+        margin-right: 25px;
       }
     }
     @media #{$desctop-width} {
@@ -38,14 +43,16 @@
 
     a {
       display: block;
+      padding: 7px;
       color: $c_white;
-      padding: 8px;
       @include tdn;
+      border-top: 1px solid #9ac2db;
+      border-bottom: 1px solid #678fa8;
 
       @media #{$tablet-width} {
         font-size: 14px;
         line-height: 26px;
-        padding: 10px;
+        padding: 13px;
         color: $c_black;
       }
     }
@@ -56,10 +63,46 @@
       }
   }
   &__toggle{
-    display: none;
+    position: absolute;
+    right: 0;
+    display: block;
+    width: 30px;
+    height: 30px;
+    font-size: 0;
+    cursor: pointer;
 
-    &--close{
-      /*текст*/
+    @media #{$tablet-width} {
+      display: none;
+    }
+
+    &--close:before {
+      content: "";
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+      width: 23px;
+      height: 4px;
+      background-color: $c_base;
+      box-shadow: 0 8px 0 0 $c_base,
+                  0 16px 0 0 $c_base;
+    }
+    &--open {
+      top: 0;
+
+      &:before, &:after {
+        content: "";
+        position: absolute;
+        top: 25px;
+        right: 17px;
+        width: 27px;
+        height: 4px;
+        background-color: #ffffff;
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+        }
     }
   }
 }
+
