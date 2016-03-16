@@ -1,17 +1,71 @@
 .form {
+  text-align: left;
+  padding-left: 20px;
+  margin-bottom: 50px;
+
+  @media #{$tablet-width} {
+    width: 648px;
+    margin: 0 auto;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media #{$desctop-width} {
+    width: 960px;
+    margin: 0 auto;
+    padding-left: 0;
+  }
 
   &__login {
 
+    @media #{$tablet-width} {
+      width: 320px;
+      height: 355px;
+    }
+
+    @media #{$desctop-width} {
+      width: 400px;
+      margin-left: 160px;
+    }
+    label {
+      margin-right: 10px;
+      color: $c_gray;
+    }
+    input[type="text"]{
+      width: 190px;
+      font-size: 18px;
+      line-height: 26px;
+      padding: 5px 0;
+      margin-bottom: 20px;
+    }
   }
 
   &__title {
-    @include font-bold;
-    font-size: $fz_large;
-    line-height: $lh_base;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+
+    @media #{$tablet-width} {
+      font-size: 21px;
+}
   }
 
   &__contacts {
 
+    @media #{$tablet-width} {
+      width: 100%;
+    }
+    label {
+      color: $c_gray;
+    }
+    input[type="tel"], input[type="email"] {
+      width: 280px;
+      font-size: 18px;
+      line-height: 26px;
+      padding: 5px;
+    }
   }
 
   &__icon {
@@ -19,11 +73,22 @@
   }
 
   &__error {
-
+    color: #ff5c5c;
+    text-transform: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
 
   &__impression {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: none;
 
+    @media #{$tablet-width} {
+      width: 324px;
+      height: 355px;
+      order: -1;
+    }
   }
 
   &__impression-list {
@@ -31,7 +96,15 @@
   }
 
   &__attractions {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
 
+    @media #{$tablet-width} {
+      width: 100%;
+    }
   }
 
   &__attractions-list {
@@ -39,6 +112,29 @@
   }
 
   &__emotions {
+    margin-bottom: 50px;
 
+    @media #{$tablet-width} {
+      width: 100%;
+    }
+
+    textarea {
+      width: 280px;
+      height: 160px;
+      font-size: 18px;
+      line-height: 26px;
+
+      @media #{$tablet-width} {
+        width: 100%;
+      }
+    }
+  }
+  button {
+    width: 280px;
+    font-size: 21px;
+    line-height: 26px;
+    padding: 5px;
+    color: $c_white;
+    background-color: $c_base;
   }
 }

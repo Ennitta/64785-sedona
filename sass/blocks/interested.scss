@@ -2,19 +2,22 @@
   margin: 20px;
 
   &__title {
-    @include font-bold;
-    font-size: 21px;
+    font-size: 18px;
     line-height: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+    @media #{$tablet-width} {
+      font-size: 30px;
+    }
   }
 
   p {
-    @include font-normal;
     color: $c_gray;
     line-height: 24px;
   }
 
   &__motel {
-    @include font-bold;
     font-size: 21px;
     line-height: 26px;
     background-color: $c_base;
