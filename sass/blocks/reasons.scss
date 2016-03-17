@@ -1,6 +1,5 @@
 .reasons {
   display: flex;
-  outline: 1px solid black;
   @include container-fluid;
 
   @media #{$mobile-width} {
@@ -8,11 +7,6 @@
 }
 
   @media #{$tablet-width} {
-    /*display: flex;*/
-    flex-wrap: wrap;
-  }
-  @media #{$desctop-width} {
-    /*display: flex;*/
     flex-wrap: wrap;
   }
   &__wrapper {
@@ -20,17 +14,9 @@
     @media #{$tablet-width} {
       display: flex;
     }
-    @media #{$desctop-width} {
-      display: flex;
-    }
     @media #{$tablet-width} {
       &:first-child {
         flex-wrap: wrap;
-      }
-      @media #{$desctop-width} {
-        &:first-child {
-        flex-wrap: wrap;
-      }
       }
     }
     /*так можно???*/
@@ -46,71 +32,99 @@
     }
   }
   &__item {
-    height: 150px;
+    padding-bottom: 34px;
+    padding-top: 57px;
     background-color: $c_base;
     color: $c_white;
-    padding-top: 57px;
 
     &--dif {
-      height: 170px;
+      padding-top: 30px;
+      padding-bottom: 20px;
       background-color: $bg_gray;
       color: $c_black;
+      border-top: 1px solid #d6d6d6;
     }
 
     @media #{$tablet-width} {
-      width: 256px;
-      height: 199px;
-    }
-    @media #{$desctop-width} {
-      width: 400px;
-      height: 199px;
+      width: 33%;
+      padding-top: 37px;
     }
 }
+  p {
+    width: 87%;
+    margin: 0 auto;
+
+    @media #{$tablet-width} {
+      width: 66%;
+    }
+  }
   &__title {
     font-size: 18px;
     line-height: 21px;
     font-weight: 700;
     margin-bottom: 8px;
+
+    @media #{$tablet-width} {
+      width: 50%;
+      margin: 8px auto;
+      font-size: 21px;
+      line-height: 26px;
+    }
 }
   &__number {
     margin-bottom: 10px;
-}
-  &__image {
-    height: 256px;
 
     @media #{$tablet-width} {
-      width: 512px;
+      margin-bottom: 18px;
+}
+}
+  &__image {
+    height: 260px;
+
+    @media #{$tablet-width} {
+      width: 67%;
     }
-    @media #{$desctop-width} {
-      width: 800px;
-    }
+
     img {
       width: 100%;
     }
 }
   &__lists {
+    position: relative;
+    top: 30px;
     @include list-clear;
-
-    @media #{$tablet-width} {
-      display: flex;
-    }
-    @media #{$desctop-width} {
-      display: flex;
-    }
-}
-  &__list {
-    height: 110px;
     text-align: left;
+    padding-bottom: 43px;
 
     @media #{$tablet-width} {
-      width: 256px;
-      height: 330px;
+      display: flex;
+      padding-top: 160px;
+      padding-bottom: 60px;
       text-align: center;
     }
-    @media #{$desctop-width} {
-      width: 400px;
-      height: 330px;
-      text-align: center;
+  }
+  &__list {
+    padding-left: 70px;
+    padding-top: 5px;
+    margin-bottom: 45px;
+
+    @media #{$tablet-width} {
+      width: 33.3%;
+      padding-left: 0;
+    }
+    b {
+      font-size: 18px;
+    }
+    div {
+      margin-top: 13px;
+      line-height: 21px;
+      color: $c_gray;
+
+      @media #{$tablet-width} {
+        width: 66%;
+        margin: 0 auto;
+        margin-top: 25px;
+      }
     }
   }
 }
