@@ -86,7 +86,7 @@
 }
   &__lists {
     position: relative;
-    top: 30px;
+    margin-top: 30px;
     @include list-clear;
     text-align: left;
     padding-bottom: 43px;
