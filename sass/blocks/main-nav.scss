@@ -9,7 +9,7 @@
   &__wrapper{
 
     @media #{$tablet-width} {
-      @include container-fluid;
+    @include container-fluid;
     }
 
     &--close{
