@@ -1,14 +1,24 @@
 .interested {
-  margin: 20px;
+  margin: 29px 20px;
+
+  @media #{$tablet-width} {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 55px;
+  }
+
+  @media #{$tablet-width} {
+    width: 38%;
+  }
 
   &__title {
-    font-size: 18px;
-    line-height: 26px;
+    font-size: 21px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 19px;
 
     @media #{$tablet-width} {
       font-size: 30px;
+      margin-bottom: 32px;
     }
   }
 
@@ -18,17 +28,34 @@
   }
 
   &__motel {
+    margin-top: 35px;
     font-size: 21px;
-    line-height: 26px;
     background-color: $c_base;
 
+    @media #{$tablet-width} {
+      margin-top: 48px;
+}
+
     a {
+      display: block;
+      padding: 16px 41px;
       @include tdn;
       color: $c_white;
     }
   }
+}
+.interested-map {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 28px;
 
-  &__map {
+  @media #{$tablet-width} {
+    margin-top: 65px;
+    margin-bottom: 40px;
+  }
 
+  img {
+    width: 100%;
   }
 }

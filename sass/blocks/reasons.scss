@@ -4,7 +4,7 @@
 
   @media #{$mobile-width} {
     flex-direction: column;
-}
+  }
 
   @media #{$tablet-width} {
     flex-wrap: wrap;
@@ -14,17 +14,19 @@
     @media #{$tablet-width} {
       display: flex;
     }
-      &--transfer{
-        @media #{$tablet-width} {
-          flex-wrap: wrap;
-        }
+    &--transfer{
+      @media #{$tablet-width} {
+        flex-wrap: wrap;
       }
-      &--width {
-        width: calc(100% / 3);
+    }
+    &--width {
+      @media #{$tablet-width} {
+        /*width: calc(100% / 3);*/
       }
+    }
   }
   &__item {
-    padding-bottom: 34px;
+    padding-bottom: 35px;
     padding-top: 57px;
     background-color: $c_base;
     color: $c_white;
@@ -35,29 +37,32 @@
     }
 
     &--dif {
-      width: auto;
+      width: 100%;
       padding-top: 30px;
-      padding-bottom: 20px;
+      padding-bottom: 19px;
       background-color: $bg_gray;
       color: $c_black;
       border-top: 1px solid #d6d6d6;
+
+      @media #{$tablet-width} {
+        padding-bottom: 60px;
+      }
     }
 
-  &__item--order {
+    p {
+      width: 87%;
+      margin: 0 auto;
+
+      @media #{$tablet-width} {
+        width: 66%;
+      }
+    }
+}
+    &__item--order {
     @media #{$tablet-width} {
       order: 2;
     }
   }
-
-    p {
-        width: 87%;
-        margin: 0 auto;
-
-        @media #{$tablet-width} {
-          width: 66%;
-        }
-      }
-}
   &__title {
     font-size: 18px;
     line-height: 21px;
@@ -82,7 +87,8 @@
     height: 260px;
 
     @media #{$tablet-width} {
-      width: 67%;
+      width: 66%;
+      margin-bottom: 0;
     }
 
     img {
@@ -90,23 +96,27 @@
     }
 }
   &__lists {
+    outline: 1px solid black;
     position: relative;
-    margin-top: 30px;
     @include list-clear;
     text-align: left;
-    padding-bottom: 43px;
+    padding-bottom: 35px;
 
     @media #{$tablet-width} {
       display: flex;
       padding-top: 120px;
-      padding-bottom: 65px;
+      padding-bottom: 55px;
       text-align: center;
+    }
+    @media #{$desctop-width} {
+      padding-bottom: 85px;
     }
   }
   &__list {
+    outline: 1px solid black;
+    margin-top: 26px;
     padding-left: 70px;
     padding-top: 5px;
-    margin-bottom: 45px;
 
     @media #{$tablet-width} {
       width: 33.3%;
