@@ -14,22 +14,11 @@
     @media #{$tablet-width} {
       display: flex;
     }
-    @media #{$tablet-width} {
-      &:first-child {
-        flex-wrap: wrap;
+      &--wrap{
+        @media #{$tablet-width} {
+          flex-wrap: wrap;
+        }
       }
-    }
-    /*так можно???*/
-    @media #{$tablet-width} {
-      &:nth-child(2) .reasons__image {
-        order: -1;
-      }
-    }
-    @media #{$desctop-width} {
-      &:nth-child(2) .reasons__image {
-        order: -1;
-      }
-    }
   }
   &__item {
     padding-bottom: 34px;
@@ -85,6 +74,12 @@
       width: 67%;
     }
 
+      &--order {
+        @media #{$tablet-width} {
+          order: -1;
+        }
+      }
+
     img {
       width: 100%;
     }
@@ -112,7 +107,7 @@
       width: 33.3%;
       padding-left: 0;
 
-      &:nth-child(2) {
+      &--order {
         order: 3;
       }
     }
