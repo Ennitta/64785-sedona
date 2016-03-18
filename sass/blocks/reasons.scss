@@ -42,11 +42,12 @@
       color: $c_black;
       border-top: 1px solid #d6d6d6;
     }
-    &--order {
-        @media #{$tablet-width} {
-          order: 2;
-        }
-      }
+
+  &__item--order {
+    @media #{$tablet-width} {
+      order: 2;
+    }
+  }
 
     p {
         width: 87%;
