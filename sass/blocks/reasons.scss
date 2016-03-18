@@ -35,18 +35,18 @@
     }
 
     @media #{$tablet-width} {
-      width: 33%;
+      /*width: 33%;*/
       padding-top: 45px;
     }
-}
-  p {
-    width: 87%;
-    margin: 0 auto;
+    p {
+        width: 87%;
+        margin: 0 auto;
 
-    @media #{$tablet-width} {
-      width: 66%;
-    }
-  }
+        @media #{$tablet-width} {
+          width: 66%;
+        }
+      }
+}
   &__title {
     font-size: 18px;
     line-height: 21px;
@@ -118,16 +118,16 @@
         font-size: 21px;
       }
     }
-    div {
-      margin-top: 13px;
-      line-height: 21px;
-      color: $c_gray;
+  }
+  &__list-text {
+    margin-top: 13px;
+    line-height: 21px;
+    color: $c_gray;
 
-      @media #{$tablet-width} {
-        width: 66%;
-        margin: 0 auto;
-        margin-top: 20px;
-      }
+    @media #{$tablet-width} {
+      width: 66%;
+      margin: 0 auto;
+      margin-top: 20px;
     }
   }
 }
