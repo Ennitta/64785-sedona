@@ -29,17 +29,25 @@
     background-color: $c_base;
     color: $c_white;
 
+    @media #{$tablet-width} {
+      width: calc(100% / 3);
+      padding-top: 45px;
+    }
+
     &--dif {
+      width: auto;
       padding-top: 30px;
       padding-bottom: 20px;
       background-color: $bg_gray;
       color: $c_black;
       border-top: 1px solid #d6d6d6;
     }
+    &--order {
+        @media #{$tablet-width} {
+          order: 2;
+        }
+      }
 
-    @media #{$tablet-width} {
-      padding-top: 45px;
-    }
     p {
         width: 87%;
         margin: 0 auto;
@@ -75,12 +83,6 @@
     @media #{$tablet-width} {
       width: 67%;
     }
-
-      &--order {
-        @media #{$tablet-width} {
-          order: -1;
-        }
-      }
 
     img {
       width: 100%;
