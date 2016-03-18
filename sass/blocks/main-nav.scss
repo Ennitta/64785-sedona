@@ -16,7 +16,7 @@
     }
   }
 
-  &__items{
+  &__list{
     @include list-clear;
     @include flex-column;
 

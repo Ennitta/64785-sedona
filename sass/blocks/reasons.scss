@@ -19,6 +19,9 @@
           flex-wrap: wrap;
         }
       }
+      &--width {
+        width: calc(100% / 3);
+      }
   }
   &__item {
     padding-bottom: 34px;
@@ -35,7 +38,6 @@
     }
 
     @media #{$tablet-width} {
-      /*width: 33%;*/
       padding-top: 45px;
     }
     p {
