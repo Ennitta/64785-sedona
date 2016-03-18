@@ -96,7 +96,6 @@
     }
 }
   &__lists {
-    outline: 1px solid black;
     position: relative;
     @include list-clear;
     text-align: left;
@@ -113,7 +112,6 @@
     }
   }
   &__list {
-    outline: 1px solid black;
     margin-top: 26px;
     padding-left: 70px;
     padding-top: 5px;

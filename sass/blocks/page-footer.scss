@@ -1,30 +1,47 @@
 .page-footer {
+  @include container-fluid;
 
   &__wrapper {
 
     @media #{$tablet-width} {
-      width: 648px;
+      margin: 0 auto;
       display: flex;
       justify-content: space-around;
-      margin: 20px auto;
-    }
-    @media #{$desctop-width} {
-      width: 960px;
     }
   }
 
   &__visit {
+    padding-top: 10px;
     @include tdn;
     font-size: 21px;
-    line-height: 26px;
+    font-weight: 700;
     color: $c_black;
   }
 
   &__social {
+    margin-top: 35px;
+    margin-bottom: 45px;
 
+    @media #{$tablet-width} {
+      margin-top: 0;
+}
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+
+      &__common {
+        width: 46px;
+        height: 48px;
+        margin-right: 5px;
+        outline: 1px solid black;
+      }
+    }
   }
 
   &__copyright {
-
+    @media #{$tablet-width} {
+      padding-top: 10px;
+    }
   }
 }
