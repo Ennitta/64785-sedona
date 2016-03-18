@@ -14,7 +14,7 @@
     @media #{$tablet-width} {
       display: flex;
     }
-      &--wrap{
+      &--transfer{
         @media #{$tablet-width} {
           flex-wrap: wrap;
         }
