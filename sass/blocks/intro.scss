@@ -8,7 +8,11 @@
   }
 
   &--hide {
+    margin-bottom: 49px;
 
+    @media #{$tablet-width} {
+      margin-bottom: 70px;
+    }
   }
 
   &__title {
@@ -20,6 +24,12 @@
       font-size: 21px;
       width: 445px;
     }
+    &--fsize {
+      @media #{$tablet-width} {
+        font-size: 30px;
+        margin-bottom: 31px;
+      }
+    }
   }
 
   &__text {
@@ -29,6 +39,17 @@
 
     @media #{$tablet-width} {
       margin: 0 auto;
+    }
+    &--lineh {
+      line-height: 24px;
+
+      @media #{$tablet-width} {
+        width: 56%;
+      }
+
+      @media #{$desctop-width} {
+        width: 37%;
+      }
     }
   }
 }
