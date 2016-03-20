@@ -22,7 +22,7 @@
     }
   }
 
-  p {
+  &__text {
     color: $c_gray;
     line-height: 24px;
   }
@@ -33,7 +33,7 @@
     background-color: $c_base;
 
     @media #{$tablet-width} {
-      margin-top: 48px;
+      margin-top: 41px;
 }
 
     a {
@@ -51,7 +51,7 @@
   margin-bottom: 28px;
 
   @media #{$tablet-width} {
-    margin-top: 65px;
+    margin-top: 58px;
     margin-bottom: 27px;
   }
 
