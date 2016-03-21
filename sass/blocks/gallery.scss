@@ -14,11 +14,15 @@
 
     @media #{$tablet-width} {
       width: 50%;
+      margin-bottom: 0;
       @include flex-column;
     }
+
     @media #{$desctop-width} {
-      width: 400px;
+      width: calc(100% / 3);
+      position: relative;
     }
+
     &--photo {
       width: 100%;
     }
@@ -29,6 +33,7 @@
     border-top: 1px solid #e5e5e5;
 
     @media #{$tablet-width} {
+      padding-top: 0;
       border-top: none;
     }
 
@@ -38,18 +43,45 @@
       margin-bottom: 5px;
 
       @media #{$tablet-width} {
-        height: 400px;
-        margin-bottom: -10px;
+        height: 268px;
+      }
+      @media #{$desctop-width} {
+        margin-bottom: -8px;
       }
     }
-
   }
 
+  &__image--height {
+
+    img {
+      @media #{$tablet-width} {
+        height: 400px;
+      }
+    }
+  }
+  &__item-info {
+
+    @media #{$tablet-width} {
+      @include flex-column;
+      margin-top: -15px;
+      padding: 20px;
+      background-color: #f2f2f2;
+    }
+/*???*/
+    @media #{$desctop-width} {
+      width: 90%;
+      position: absolute;
+      bottom: 0;
+      padding-top: 13px;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 10;
+    }
+  }
   &__discription {
     font-weight: 700;
 
-    @media #{$tablet-width} {
-      background-color: #f2f2f2;
+    @media #{$desctop-width} {
+      color: $c_white;
     }
   }
 
@@ -58,9 +90,8 @@
     text-transform: none;
     color: $c_gray;
 
-    @media #{$tablet-width} {
-      background-color: #f2f2f2;
-      margin-bottom: 0;
+    @media #{$desctop-width} {
+      color: $c_white;
     }
   }
 
@@ -71,10 +102,12 @@
     color: $c_black;
 
     @media #{$tablet-width} {
-      position: relative;
-      top: -30px;
       align-self: flex-end;
-      background-color: #f2f2f2;
+      margin-top: -35px;
+    }
+
+    @media #{$desctop-width} {
+      color: $c_white;
     }
   }
 }
