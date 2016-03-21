@@ -1,25 +1,19 @@
 .form {
-  text-align: left;
-  padding-left: 20px;
+  @include container-fluid;
+  margin-top: -10px;
   margin-bottom: 50px;
 
   @media #{$tablet-width} {
-    width: 648px;
-    margin: 0 auto;
-    padding-left: 0;
     display: flex;
     flex-wrap: wrap;
   }
 
-  @media #{$desctop-width} {
-    width: 960px;
-    margin: 0 auto;
-    padding-left: 0;
-  }
-
   &__login {
-
-    @media #{$tablet-width} {
+    margin: 20px;
+    margin-bottom: 25px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+    /*@media #{$tablet-width} {
       width: 320px;
       height: 355px;
     }
@@ -27,20 +21,32 @@
     @media #{$desctop-width} {
       width: 400px;
       margin-left: 160px;
-    }
+    }*/
     label {
-      margin-right: 10px;
+      margin-right: 15px;
       color: $c_gray;
     }
     input[type="text"]{
-      width: 190px;
+      width: 55%;
+      padding: 15px 20px;
       font-size: 18px;
       line-height: 26px;
-      padding: 5px 0;
-      margin-bottom: 20px;
+      background-color: #f2f2f2;
+      border: none;
     }
   }
-
+  &__login-name {
+    margin-bottom: 22px;
+    label {
+      margin-right: 18px;
+    }
+    input[type="text"] {
+      width: 67%;
+    }
+  }
+  &__login-surname {
+    margin-bottom: 22px;
+  }
   &__title {
     font-size: 18px;
     font-weight: 700;
@@ -53,6 +59,7 @@
   }
 
   &__contacts {
+    border-top: 1px solid #e5e5e5;
 
     @media #{$tablet-width} {
       width: 100%;
