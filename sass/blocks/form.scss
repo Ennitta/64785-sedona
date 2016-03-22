@@ -7,8 +7,14 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
+    margin-bottom: 100px;
   }
 
+  @media #{$desctop-width} {
+    width: 72%;
+    margin-top: -40px;
+  }
+/*???*/
   &__login {
     outline: 1px solid black;
     margin: 20px;
@@ -20,15 +26,15 @@
       margin: 0;
       margin-bottom: 45px;
     }
-/*
+
     @media #{$desctop-width} {
-      width: 400px;
-      margin-left: 160px;
-    }*/
+    }
+
     label {
       margin-right: 15px;
       color: $c_gray;
     }
+
     input[type="text"]{
       width: 55%;
       padding: 15px 20px;
@@ -63,13 +69,20 @@
     text-transform: uppercase;
     border-top: 1px solid #e5e5e5;
 
+    &--width {
+      @media #{$tablet-width} {
+        width: 42%;
+        margin: 0 auto;
+      }
+    }
+
     @media #{$tablet-width} {
       margin-top: 10px;
       font-size: 21px;
       border: none;
     }
   }
-
+/*???*/
   &__contacts {
     outline: 1px solid black;
     margin: 20px;
@@ -79,6 +92,11 @@
       width: 84%;
       @include flex-column;
       margin: 0 auto;
+      margin-bottom: 18px;
+    }
+
+    @media #{$desctop-width} {
+      width: 100%;
     }
 
     label {
@@ -87,7 +105,7 @@
       color: $c_gray;
 
       @media #{$tablet-width} {
-        align-self: flex-start;
+        /*align-self: flex-start;*/
       }
     }
     input[type="tel"], input[type="email"] {
@@ -118,7 +136,7 @@
     text-transform: none;
 
     @media #{$tablet-width} {
-      align-self: flex-end;
+      /*align-self: flex-end;*/
     }
   }
 
@@ -133,6 +151,9 @@
       width: 50%;
       margin-bottom: 45px;
       order: -1;
+    }
+
+    @media #{$desctop-width} {
     }
   }
 
@@ -154,7 +175,7 @@
       margin-right: 38px;
     }
   }
-
+/*???*/
   &__attractions {
     outline: 1px solid black;
     font-size: 18px;
@@ -164,20 +185,36 @@
 
     @media #{$tablet-width} {
       width: 100%;
-      text-align: center;
+      margin-bottom: 28px;
     }
   }
 
   &__attractions-list {
+    outline: 1px solid black;
     @include list-clear;
 
+    @media #{$tablet-width} {
+      width: 61%;
+      margin: 0 auto;
+      padding-bottom: 10px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @media #{$desctop-width} {
+      width: 100%;
+    }
+
     li {
+      outline: 1px solid black;
       margin-top: 31px;
       margin-bottom: 54px;
       margin-left: 45px;
 
       @media #{$tablet-width} {
-        margin: 0;
+        margin: 0 auto;
+        margin-top: 58px;
+        margin-bottom: 10px;
       }
     }
     input[type="checkbox"] {
@@ -193,6 +230,7 @@
     @media #{$tablet-width} {
       width: 100%;
       margin: 0;
+      margin-bottom: 52px;
     }
 
     textarea {
@@ -203,11 +241,17 @@
       font-weight: 700;
 
       @media #{$tablet-width} {
-        /*width: 100%;*/
+        width: 80%;
+        margin-top: 35px;
+      }
+
+      @media #{$desctop-width} {
+        width: 95%;
       }
     }
   }
   button {
+    outline: 1px solid black;
     width: 87%;
     padding: 17px 0;
     font-size: 21px;
@@ -216,5 +260,15 @@
     color: $c_white;
     background-color: $c_base;
     border: none;
+
+    @media #{$tablet-width} {
+      width: 40%;
+      margin-left: 65px;
+    }
+
+    @media #{$desctop-width} {
+      width: 50%;
+      margin-left: 0;
+    }
   }
 }
