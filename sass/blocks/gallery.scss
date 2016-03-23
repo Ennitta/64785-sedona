@@ -64,20 +64,26 @@
 
     @media #{$tablet-width} {
       @include flex-column;
-      margin-top: -15px;
-      padding: 20px;
       background-color: #f2f2f2;
     }
-/*???*/
+
     @media #{$desctop-width} {
       width: 100%;
       position: absolute;
       bottom: 0;
-      padding-top: 13px;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 10px 20px;
       background: rgba(0, 0, 0, 0.3);
       z-index: 10;
     }
   }
+
+  &__item-signature {
+    @media #{$desctop-width} {
+    }
+  }
+
   &__discription {
     font-weight: 700;
 
@@ -98,13 +104,12 @@
 
   &__like {
     font-weight: 700;
-    padding-left: 37px;
+    margin-left: 37px;
     text-decoration: none;
     color: $c_black;
 
     @media #{$tablet-width} {
-      align-self: flex-end;
-      margin-top: -35px;
+      margin-top: 13px;
     }
 
     @media #{$desctop-width} {
