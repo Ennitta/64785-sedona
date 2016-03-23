@@ -60,6 +60,7 @@
     }
   }
   &__item-info {
+    box-sizing: border-box;
 
     @media #{$tablet-width} {
       @include flex-column;
@@ -69,7 +70,7 @@
     }
 /*???*/
     @media #{$desctop-width} {
-      width: 90%;
+      width: 100%;
       position: absolute;
       bottom: 0;
       padding-top: 13px;
