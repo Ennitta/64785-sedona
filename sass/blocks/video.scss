@@ -1,4 +1,19 @@
 .video {
+  @include container-fluid;
+  padding-bottom: 66px;
+  margin-bottom: 67px;
+
+  @media #{$desctop-width} {
+    margin-bottom: 48px;
+  }
+
+  img {
+    width: 100%;
+
+    @media #{$tablet-width} {
+      height: 500px;
+    }
+  }
 
   &__slider {
 

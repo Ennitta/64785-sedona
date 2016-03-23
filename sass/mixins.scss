@@ -21,3 +21,16 @@
 @mixin tdn() {
   text-decoration: none;
 }
+//
+@mixin container-fluid () {
+  width: auto;
+  @media #{$tablet-width} {
+    width: 84%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  @media #{$desctop-width} {
+    width: 90%;
+    max-width: 1200px;
+  }
+}

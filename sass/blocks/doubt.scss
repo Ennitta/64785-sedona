@@ -1,0 +1,35 @@
+.doubt {
+  @include container-fluid;
+  border-top: 1px solid #e5e5e5;
+  margin-top: -5px;
+  margin-bottom: 32px;
+  padding-top: 37px;
+
+  @media #{$tablet-width} {
+    width: 55%;
+    margin-top: 24px;
+    margin-bottom: 70px;
+    border-top: none;
+  }
+
+  @media #{$desctop-width} {
+    width: 35%;
+    margin-top: 33px;
+  }
+
+  &__title{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 25px;
+
+    @media #{$tablet-width} {
+      margin-bottom: 30px;
+      font-size: 30px;
+      line-height: 30px;
+    }
+  }
+  &__text{
+    line-height: 24px;
+    color: $c_gray;
+  }
+}

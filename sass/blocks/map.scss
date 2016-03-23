@@ -1,0 +1,15 @@
+.map {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 28px;
+
+  @media #{$tablet-width} {
+    margin-top: 58px;
+    margin-bottom: 27px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
