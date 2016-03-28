@@ -4,18 +4,17 @@
   margin-bottom: 75px;
 
   &__login {
-    outline: 1px solid black;
     margin: 20px;
     margin-bottom: 25px;
-    text-align: right;
 
     label {
+      width: 70px;
       margin-right: 15px;
       color: $c_gray;
     }
 
     input[type="text"]{
-      width: 55%;
+      width: 100%;
       padding: 15px 20px;
       font-size: 18px;
       line-height: 26px;
@@ -23,19 +22,29 @@
       border: none;
     }
   }
+
+  &__login-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
   &__login-name {
-    margin-bottom: 22px;
 
     label {
-      margin-right: 18px;
+      width: 35px;
     }
+
     input[type="text"] {
-      width: 67%;
+      /*width: 68%;*/
     }
   }
-  &__login-surname {
+
+  &__login-name,&__login-surname, &__login-middlename {
+    display: flex;
+    align-items: center;
     margin-bottom: 22px;
   }
+
   &__title {
     margin-bottom: 21px;
     padding-top: 18px;
@@ -44,20 +53,24 @@
     text-align: center;
     text-transform: uppercase;
     border-top: 1px solid #e5e5e5;
+
+    &--login:after {
+      content: ", пожалуйста:";
+    }
   }
 
   &__contacts {
-    outline: 1px solid black;
     margin: 20px;
     text-align: left;
 
     label {
-      outline: 1px solid black;
-      margin-left: 23px;
+      margin-left: 3%;
       color: $c_gray;
     }
+
     input[type="tel"], input[type="email"] {
-      width: 83%;
+      width: 100%;
+      box-sizing: border-box;
       margin-top: 7px;
       padding: 18px 20px;
       font-size: 17px;
@@ -66,6 +79,11 @@
     }
   }
 
+  &__contacts-tel {
+    label:before {
+      content: "контактный";
+    }
+  }
   &__icon {
     label {
       display: none;
@@ -73,15 +91,13 @@
   }
 
   &__error {
-    outline: 1px solid black;
     margin-bottom: 11px;
-    margin-left: 24px;
+    margin-left: 3%;
     color: #ff5c5c;
     text-transform: none;
   }
 
   &__impression {
-    outline: 1px solid black;
     font-size: 18px;
     font-weight: 700;
     text-transform: none;
@@ -102,7 +118,6 @@
   }
 
   &__attractions {
-    outline: 1px solid black;
     font-size: 18px;
     font-weight: 700;
     text-transform: none;
@@ -110,11 +125,9 @@
   }
 
   &__attractions-list {
-    outline: 1px solid black;
     @include list-clear;
 
     li {
-      outline: 1px solid black;
       margin-top: 31px;
       margin-bottom: 54px;
       margin-left: 45px;
@@ -125,7 +138,6 @@
   }
 
   &__emotions {
-    outline: 1px solid black;
     margin-top: -13px;
     margin-bottom: 40px;
 
@@ -135,10 +147,10 @@
       padding: 18px;
       font-size: 18px;
       font-weight: 700;
+      background-color: #f2f2f2;
     }
   }
   button {
-    outline: 1px solid black;
     width: 87%;
     padding: 17px 0;
     font-size: 21px;
@@ -147,6 +159,12 @@
     color: $c_white;
     background-color: $c_base;
     border: none;
+  }
+  /*это правильно?*/
+  input::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder{
+    color: black;
+    font-weight: 700;
   }
 }
 
@@ -158,63 +176,122 @@
     margin-bottom: 100px;
 
     &__login {
-      width: 50%;
+      position: relative;
+      width: 49%;
       margin: 0;
-      margin-bottom: 45px;
+      margin-bottom: 20px;
     }
+
+    &__login:before {
+      content: "";
+      position: absolute;
+      top: 178px;
+      left: -141px;
+      width: 290px;
+      height: 1px;
+      background-color: #dbdbdb;
+      transform: rotate(90deg);
+    }
+
+    &__login-container {
+      margin-right: 0;
+    }
+
     &__login-name {
       margin-top: 57px;
     }
+
     &__title {
       margin-top: 10px;
       font-size: 21px;
       border: none;
+
+      &--login {
+        width: 80%;
+        margin-left: 20%;
+        text-align: left;
+      }
+
+      &--login:after {
+        content: ":";
+      }
 
       &--width {
         width: 42%;
         margin: 0 auto;
       }
     }
+
     &__contacts {
-      width: 84%;
+      width: 100%;
       @include flex-column;
       margin: 0 auto;
-      margin-bottom: 18px;
+      margin-bottom: 39px;
+    }
 
-      input[type="tel"], input[type="email"] {
-        width: 93%;
+    &__contacts-wrapper {
+      margin-top: 5px;
+    }
+
+    &__contacts-tel {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+
+      label {
+        width: 47%;
       }
+      input[type="tel"] {
+      }
+    }
+
+    &__icon {
+      width: 100%;
+      order: 3;
+    }
+
+    &__error {
+      width: 50%;
+      margin: 0;
+      text-align: right;
     }
     &__impression {
       width: 50%;
-      margin-bottom: 45px;
+      margin-bottom: 20px;
       order: -1;
     }
+
     &__impression-list {
 
       li {
         margin-top: 60px;
         margin-bottom: 0;
-        margin-left: 80px;
       }
     }
     &__attractions {
       width: 100%;
       margin-bottom: 28px;
     }
+
     &__attractions-list {
-      width: 61%;
+      width: 72%;
       margin: 0 auto;
       padding-bottom: 10px;
       display: flex;
       flex-wrap: wrap;
 
       li {
+        width: 50%;
         margin: 0 auto;
         margin-top: 58px;
         margin-bottom: 10px;
       }
     }
+/* не могу проставить номер правильно
+    &__attractions-order {
+      order: -1;
+    }*/
+
     &__emotions {
       width: 100%;
       margin: 0;
@@ -229,6 +306,22 @@
       width: 40%;
       margin-left: 65px;
     }
+
+    &__line {
+      position: relative;
+    }
+/*проблема в emotions - первая линия не там где надо*/
+    &__line:before, &__line:after{
+      content: "";
+      position: absolute;
+      top: 41px;
+      width: 20%;
+      height: 1px;
+      background-color: #dbdbdb;
+    }
+    &__line:after {
+      right: 0;
+    }
   }
 }
 
@@ -237,12 +330,81 @@
     width: 72%;
     margin-top: -40px;
 
+    &__login-container {
+      width: 80%;
+    }
+
+    &__title {
+
+      &--login:after {
+      content: ", пожалуйста:";
+      }
+    }
+
     &__contacts {
+      label {
+        margin-left: 0;
+      }
+      input[type="tel"], input[type="email"] {
+        margin-top: 0;
+      }
+    }
+
+    &__contacts-wrapper {
+      display: flex;
+      margin-top: 20px;
+    }
+
+    &__contacts-tel {
+      width: 42%;
+      margin-bottom: 0;
+      align-items: center;
+
+      label {
+        width: 20%;
+        margin-right: 5%;
+        order: 2;
+      }
+      label:before {
+        content: "";
+      }
+    }
+
+    &__icon {
+      width: 66%;
+
+      &--width {
+        width: 75%;
+      }
+    }
+    &__error {
       width: 100%;
+      margin-bottom: 7px;
+      text-align: center;
+    }
+
+    &__contacts-mail {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      margin-left: 10%;
+      margin-top: 30px;
+
+      label {
+        margin-right: 4%;
+      }
+    }
+
+    &__attractions {
+      margin-bottom: 32px;
     }
 
     &__attractions-list {
       width: 100%;
+
+      li {
+        width: 25%;
+      }
     }
 
     &__emotions {
@@ -255,6 +417,10 @@
     button {
       width: 50%;
       margin-left: 0;
+    }
+
+    &__line:before, &__line:after {
+      width: 30%;
     }
   }
 }

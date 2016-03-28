@@ -33,32 +33,40 @@
         </section>
         <form class="form" action="/echo" method="post">
           <div class="form__login">
-            <div class="form__title">Представьтесь, пожалуйста:</div>
-            <div class="form__login-name">
-              <label for="name">Имя:</label>
-              <input type="text" name="name" id="name" placeholder="Маргарита">
-            </div>
-            <div class="form__login-surname">
-              <label for="surname">Фамилия:</label>
-              <input type="text" name="surname" id="surname" placeholder="Мунтанион">
-            </div>
-            <div class="form__login-middlename">
-              <label for="middle-name">Отчество:</label>
-              <input type="text" name="middle-name" id="middle-name" placeholder="Николаевна">
+            <div class="form__title form__title--login">Представьтесь</div>
+            <div class="form__login-container">
+              <div class="form__login-name">
+                <label for="name">Имя:</label>
+                <input type="text" name="name" id="name" placeholder="Маргарита">
+              </div>
+              <div class="form__login-surname">
+                <label for="surname">Фамилия:</label>
+                <input type="text" name="surname" id="surname" placeholder="Мунтанион">
+              </div>
+              <div class="form__login-middlename">
+                <label for="middle-name">Отчество:</label>
+                <input type="text" name="middle-name" id="middle-name" placeholder="Николаевна">
+              </div>
             </div>
           </div>
-          <div class="form__contacts">
+          <div class="form__contacts form__line">
             <div class="form__title">Контакная информация:</div>
-            <label for="tel">Контактный телефон:</label>
-            <div class="form__icon">
-              <input type="tel" name="tel" id="tel" placeholder="Введите телефон">
-              <label for="tel"></label>
-            </div>
-            <div class="form__error">Ошибка, перепроверьте номер</div>
-            <label for="email">Электронная почта:</label>
-            <div class="form__icon">
-              <input type="email" name="email" id="email" placeholder="Введите e-mail">
-              <label for="email"></label>
+            <div class="form__contacts-wrapper">
+              <div class="form__contacts-tel">
+                <label for="tel"> телефон:</label>
+                <div class="form__icon form__icon--width">
+                  <input type="tel" name="tel" id="tel" placeholder="Введите телефон">
+                  <label for="tel"></label>
+                </div>
+                <div class="form__error">Ошибка, перепроверьте номер</div>
+              </div>
+              <div class="form__contacts-mail">
+                <label for="email">Электронная почта:</label>
+                <div class="form__icon">
+                  <input type="email" name="email" id="email" placeholder="Введите e-mail">
+                  <label for="email"></label>
+                </div>
+              </div>
             </div>
           </div>
           <div class="form__impression">
@@ -78,7 +86,7 @@
               </li>
             </ul>
           </div>
-          <div class="form__attractions">
+          <div class="form__attractions form__line">
             <div class="form__title form__title--width">Посещенные достопримечательности:</div>
             <ul class="form__attractions-list">
               <li>
@@ -89,7 +97,7 @@
                 <input type="checkbox" id="chb-2" checked>
                 <label for="chb-2">Слайд-парк</label>
               </li>
-              <li>
+              <li class="form__attractions-order">
                 <input type="checkbox" id="chb-3">
                 <label for="chb-3">Гора-Колокол</label>
               </li>
@@ -99,7 +107,7 @@
               </li>
             </ul>
           </div>
-          <div class="form__emotions">
+          <div class="form__emotions form__line">
             <div class="form__title">Опишите свои эмоции:</div>
             <label for="textarea"></label>
             <textarea placeholder="Опишите подробно все свои восторги " name="textarea" id="textarea"></textarea>
