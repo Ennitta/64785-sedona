@@ -1,23 +1,38 @@
 .intro {
-  margin-bottom: 30px;
+  width: 280px;
+  margin-bottom: 25px;
+  @include container-fluid;
 
   @media #{$tablet-width} {
     margin-bottom: 50px;
   }
 
   &--hide {
+    margin-bottom: 27px;
 
+    @media #{$tablet-width} {
+      margin-bottom: 47px;
+    }
+
+    @media #{$desctop-width} {
+      margin-bottom: 70px;
+    }
   }
 
   &__title {
-    width: 260px;
     font-size: 18px;
     margin: 0 auto;
-    margin-bottom: 26px;
+    margin-bottom: 27px;
 
     @media #{$tablet-width} {
       font-size: 21px;
       width: 445px;
+    }
+    &--fsize {
+      @media #{$tablet-width} {
+        font-size: 30px;
+        margin-bottom: 31px;
+      }
     }
   }
 
@@ -27,8 +42,18 @@
     color: $c_gray;
 
     @media #{$tablet-width} {
-      width: 460px;
       margin: 0 auto;
+    }
+    &--lineh {
+      line-height: 24px;
+
+      @media #{$tablet-width} {
+        width: 56%;
+      }
+
+      @media #{$desctop-width} {
+        width: 37%;
+      }
     }
   }
 }
