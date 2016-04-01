@@ -1,18 +1,18 @@
 .video {
-  @include container-fluid;
+  margin: 0 20px;
   padding-bottom: 66px;
   margin-bottom: 67px;
 
   @media #{$desctop-width} {
+    width: 70%;
+    margin: 0 auto;
     margin-bottom: 48px;
   }
 
   img {
     width: 100%;
-
-    @media #{$tablet-width} {
-      height: 500px;
-    }
+    height: auto;
+    display: block;
   }
 
   &__slider {

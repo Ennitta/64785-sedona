@@ -5,6 +5,7 @@
   &__wrapper {
 
     @media #{$tablet-width} {
+      width: 90%;
       margin: 0 auto;
       padding-left: 35px;
       padding-right: 77px;
@@ -13,14 +14,14 @@
     }
 /*???*/
     @media #{$desctop-width} {
-      width: 86%;
+      width: 80%;
       padding-left: 0;
       padding-right: 0;
     }
   }
 
   &__visit {
-    padding-top: 10px;
+    padding: 10px;
     @include tdn;
     font-size: 21px;
     font-weight: 700;
@@ -88,7 +89,7 @@
     right: 0;
     width: 100%;
     height: 100%;
-    background: url("../../img/logo-htmlacademy.svg") 60% 50% no-repeat;
+    background: url("../../img/logo-htmlacademy.svg") 72% 50% no-repeat;
     background-size: 30px auto;
 
     @media #{$tablet-width} {
