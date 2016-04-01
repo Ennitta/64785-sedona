@@ -76,14 +76,24 @@
   }
 
   &__contacts-tel {
-    label:before {
+
+    label[for="tel"]:before {
       content: "контактный";
     }
   }
   &__icon {
-    label {
-      display: none;
-    }
+    position: relative;
+  }
+
+  &__icon:before {
+    content: "";
+      position: absolute;
+      top: 8px;
+      right: 0;
+      width: 55px;
+      height: 55px;
+      background: #e6e6e6 url("../../img/icon-phone.svg") 50% 50% no-repeat;
+      background-size: 18px auto;
   }
 
   &__error {
@@ -306,7 +316,7 @@
     &__line {
       position: relative;
     }
-/*проблема в emotions - первая линия не там где надо*/
+
     &__line:before, &__line:after{
       content: "";
       position: absolute;

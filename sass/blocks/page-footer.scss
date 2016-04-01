@@ -1,4 +1,5 @@
 .page-footer {
+  margin-bottom: 20px;
   @include container-fluid;
 
   &__wrapper {
@@ -39,17 +40,60 @@
       justify-content: center;
 
       &__common {
+        position: relative;
         width: 46px;
         height: 48px;
         margin-right: 5px;
-        outline: 1px solid black;
+        background-color: $c_base;
+      }
+
+      &__common:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: 20px auto;
+      }
+
+      &__common--tw:before {
+        background: url(../../img/icon-twitter.svg) center no-repeat;
+      }
+
+      &__common--fb:before {
+        background: url(../../img/icon-facebook.svg) center no-repeat;
+      }
+
+      &__common--yut:before {
+        background: url(../../img/icon-youtube.svg) center no-repeat;
       }
     }
   }
 
   &__copyright {
+    position: relative;
+    margin-right: 50px;
+    line-height: 40px;
+
     @media #{$tablet-width} {
       padding-top: 10px;
+    }
+  }
+
+  &__copyright:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../../img/logo-htmlacademy.svg") 60% 50% no-repeat;
+    background-size: 30px auto;
+
+    @media #{$tablet-width} {
+      top: -15px;
+      right: -65px;
     }
   }
 }
