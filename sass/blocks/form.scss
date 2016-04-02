@@ -86,13 +86,20 @@
 
   &__icon:before {
     content: "";
-      position: absolute;
-      top: 8px;
-      right: 0;
-      width: 55px;
-      height: 55px;
-      background: #e6e6e6 url("../../img/icon-phone.svg") 50% 50% no-repeat;
-      background-size: 18px auto;
+    position: absolute;
+    top: 8px;
+    right: 0;
+    width: 55px;
+    height: 55px;
+    background-size: 18px auto;
+  }
+
+  &__icon--tel:before {
+    background: #e6e6e6 url("../../img/icon-phone.svg") 50% 50% no-repeat;
+  }
+
+  &__icon--mail:before {
+    background: #e6e6e6 url("../../img/icon-mail.svg") 50% 50% no-repeat;
   }
 
   &__error {
