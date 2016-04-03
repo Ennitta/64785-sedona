@@ -99,7 +99,11 @@
           <div class="interested__motel"><a href="#">Найти гостиницу</a></div>
         </div>
         <div class="map">
-          <img src="img/bg-map-mobile.jpg" width="320" height="350" alt="">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/bg-map-desktop.jpg">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet.jpg">
+            <img src="img/bg-map-mobile.jpg" width="320" height="350" alt="">
+          </picture>
         </div>
       </div>
       <footer class="page-footer">
