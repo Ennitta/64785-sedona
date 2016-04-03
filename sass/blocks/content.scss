@@ -18,17 +18,6 @@
       background-image: url("../../img/bg-back-mobile@2x.jpg");
     }
 
-    @media #{$tablet-width} {
-      top: 5px;
-      height: 520px;
-      background-image: url("../../img/bg-back-desktop.jpg");
-
-      @media (min-resolution: 144dpi),
-             (min-resolution: 1.5dppx) {
-      background-image: url("../../img/bg-back-desktop@2x.jpg");
-      }
-    }
-
     img {
       position: relative;
       top: 15%;
@@ -38,10 +27,6 @@
       margin: 0 auto;
       padding-top: 20px;
       padding-bottom: 20px;
-
-      @media #{$tablet-width} {
-        padding-top: 0;
-      }
     }
   }
 
@@ -54,16 +39,6 @@
     height: 72px;
     background: url(../../img/bg-intro-triangle-mobile.svg) bottom center no-repeat;
     background-size: cover;
-
-    @media #{$tablet-width} {
-      background: url(../../img/bg-intro-triangle-tablet.svg) bottom center no-repeat;
-      background-size: cover;
-    }
-
-    @media #{$desctop-width} {
-      background: url(../../img/bg-intro-triangle-desktop.svg) bottom center no-repeat;
-      background-size: cover;
-    }
   }
 
   &__mini-welcome {
@@ -71,22 +46,58 @@
     height: 160px;
     margin-bottom: 7px;
 
-    @media #{$tablet-width} {
-      height: 300px;
-      margin-bottom: 65px;
-    }
-
-    @media #{$desctop-width} {
-      margin-bottom: 115px;
-    }
     img {
       top: 5%;
       width: 70%;
       min-height: 80px;
+    }
+  }
+}
 
-      @media #{$tablet-width} {
+@media #{$tablet-width} {
+  .content {
+
+    &__welcome, &__mini-welcome {
+      top: 5px;
+      height: 520px;
+      background-image: url("../../img/bg-back-desktop.jpg");
+
+      @media (min-resolution: 144dpi),
+             (min-resolution: 1.5dppx) {
+      background-image: url("../../img/bg-back-desktop@2x.jpg");
+      }
+
+      img {
+        padding-top: 0;
+      }
+    }
+
+    &__welcome:after, &__mini-welcome:after {
+      background: url(../../img/bg-intro-triangle-tablet.svg) bottom center no-repeat;
+      background-size: cover;
+    }
+
+    &__mini-welcome {
+      height: 300px;
+      margin-bottom: 65px;
+
+      img {
         top: 33%;
       }
+    }
+  }
+}
+
+@media #{$desctop-width} {
+  .content {
+
+    &__welcome:after, &__mini-welcome:after {
+      background: url(../../img/bg-intro-triangle-desktop.svg) bottom center no-repeat;
+      background-size: cover;
+    }
+
+    &__mini-welcome {
+      margin-bottom: 115px;
     }
   }
 }

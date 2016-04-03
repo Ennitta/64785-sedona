@@ -7,20 +7,33 @@
     margin: 0 auto;
     display: block;
 
-    @media #{$tablet-width} {
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}
+
+@media #{$tablet-width} {
+  .page-header {
+
+    &__logo {
       width: auto;
       position: absolute;
       top: 0;
       left: 50%;
       transform: translateX(-50%);
+    }
   }
+}
 
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
+@media #{$desctop-width} {
+  .page-header {
 
-      @media #{$desctop-width} {
+    &__logo {
+
+      img {
         width: 187px;
         height: 97px;
       }

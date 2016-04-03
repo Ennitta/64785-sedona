@@ -1,25 +1,10 @@
 .interested {
   margin: 29px 20px;
 
-  @media #{$tablet-width} {
-    width: 60%;
-    margin: 0 auto;
-    margin-top: 55px;
-  }
-
-  @media #{$tablet-width} {
-    width: 38%;
-  }
-
   &__title {
     font-size: 21px;
     font-weight: 700;
     margin-bottom: 19px;
-
-    @media #{$tablet-width} {
-      font-size: 30px;
-      margin-bottom: 32px;
-    }
   }
 
   &__text {
@@ -32,15 +17,34 @@
     font-size: 21px;
     background-color: $c_base;
 
-    @media #{$tablet-width} {
-      margin-top: 41px;
-}
-
     a {
       display: block;
       padding: 16px 41px;
       @include tdn;
       color: $c_white;
     }
+  }
+}
+
+@media #{$tablet-width} {
+  .interested {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 55px;
+
+    &__title {
+      font-size: 30px;
+      margin-bottom: 32px;
+    }
+
+    &_motel {
+      margin-top: 41px;
+    }
+  }
+}
+
+@media #{$desctop-width} {
+  .interested {
+    width: 38%;
   }
 }

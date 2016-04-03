@@ -2,24 +2,6 @@
   margin-bottom: 20px;
   @include container-fluid;
 
-  &__wrapper {
-
-    @media #{$tablet-width} {
-      width: 90%;
-      margin: 0 auto;
-      padding-left: 35px;
-      padding-right: 77px;
-      display: flex;
-      justify-content: space-between;
-    }
-/*???*/
-    @media #{$desctop-width} {
-      width: 80%;
-      padding-left: 0;
-      padding-right: 0;
-    }
-  }
-
   &__visit {
     padding: 10px;
     @include tdn;
@@ -31,55 +13,12 @@
   &__social {
     margin-top: 35px;
     margin-bottom: 45px;
-
-    @media #{$tablet-width} {
-      margin-top: 0;
-}
-
-    .social-links {
-      display: flex;
-      justify-content: center;
-
-      &__common {
-        position: relative;
-        width: 46px;
-        height: 48px;
-        margin-right: 5px;
-        background-color: $c_base;
-      }
-
-      &__common:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-size: 20px auto;
-      }
-
-      &__common--tw:before {
-        background: url(../../img/icon-twitter.svg) center no-repeat;
-      }
-
-      &__common--fb:before {
-        background: url(../../img/icon-facebook.svg) center no-repeat;
-      }
-
-      &__common--yut:before {
-        background: url(../../img/icon-youtube.svg) center no-repeat;
-      }
-    }
   }
 
   &__copyright {
     position: relative;
     margin-right: 50px;
     line-height: 40px;
-
-    @media #{$tablet-width} {
-      padding-top: 10px;
-    }
   }
 
   &__copyright:after {
@@ -91,10 +30,43 @@
     height: 100%;
     background: url("../../img/logo-htmlacademy.svg") 72% 50% no-repeat;
     background-size: 30px auto;
+  }
+}
 
-    @media #{$tablet-width} {
+@media #{$tablet-width} {
+  .page-footer {
+
+    &__wrapper {
+      width: 90%;
+      margin: 0 auto;
+      padding-left: 35px;
+      padding-right: 77px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__social {
+      margin-top: 0;
+    }
+
+    &__copyright {
+      padding-top: 10px;
+    }
+
+    &__copyright:after {
       top: -15px;
       right: -65px;
+    }
+  }
+}
+
+@media #{$desctop-width} {
+  .page-footer {
+
+    &__wrapper {
+      width: 80%;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }

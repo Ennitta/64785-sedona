@@ -3,42 +3,15 @@
   width: auto;
   background-color: $c_base;
 
-  @media #{$tablet-width} {
-    background-color: $c_white;
-  }
-  &__wrapper{
-
-    @media #{$tablet-width} {
-      @include container-fluid;
-    }
-
-    &--close{
-    }
-  }
-
   &__list{
     @include list-clear;
     @include flex-column;
-
-    @media #{$tablet-width} {
-      flex-direction: row;
-    }
   }
 
   &__item{
     font-size: 18px;
     line-height: 40px;
     font-weight: 700;
-
-    @media #{$tablet-width} {
-      width: 20%;
-      &:nth-child(2) {
-        margin-right: auto;
-      }
-    }
-    @media #{$desctop-width} {
-      margin-left: 0;
-    }
 
     a {
       display: block;
@@ -47,22 +20,9 @@
       @include tdn;
       border-top: 1px solid #9ac2db;
       border-bottom: 1px solid #678fa8;
-
-      @media #{$tablet-width} {
-        font-size: 14px;
-        line-height: 26px;
-        padding: 13px;
-        color: $c_black;
-        border-top: none;
-        border-bottom: none;
-      }
     }
-      @media #{$desctop-width} {
-        font-size: 14px;
-        line-height: 26px;
-        color: $c_black;
-      }
   }
+
   &__toggle{
     position: absolute;
     right: 0;
@@ -71,10 +31,6 @@
     height: 30px;
     font-size: 0;
     cursor: pointer;
-
-    @media #{$tablet-width} {
-      display: none;
-    }
 
     &--close:before {
       content: "";
@@ -103,6 +59,53 @@
       &:after {
         transform: rotate(-45deg);
         }
+    }
+  }
+}
+
+@media #{$tablet-width} {
+  .main-nav {
+    background-color: $c_white;
+
+    &__wrapper {
+      @include container-fluid;
+    }
+
+    &__list {
+      flex-direction: row;
+    }
+
+    &__item {
+      width: 20%;
+
+      &--margin{
+        margin-right: auto;
+      }
+
+      a {
+        font-size: 14px;
+        line-height: 26px;
+        padding: 13px;
+        color: $c_black;
+        border-top: none;
+        border-bottom: none;
+      }
+    }
+
+    &__toggle {
+      display: none;
+    }
+  }
+}
+
+@media #{$desctop-width} {
+  .main-nav {
+
+    &__item {
+      margin-left: 0;
+      font-size: 14px;
+      line-height: 26px;
+      color: $c_black;
     }
   }
 }
