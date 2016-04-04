@@ -1,25 +1,9 @@
 .page-footer {
+  margin-bottom: 20px;
   @include container-fluid;
 
-  &__wrapper {
-
-    @media #{$tablet-width} {
-      margin: 0 auto;
-      padding-left: 35px;
-      padding-right: 77px;
-      display: flex;
-      justify-content: space-between;
-    }
-/*???*/
-    @media #{$desctop-width} {
-      width: 86%;
-      padding-left: 0;
-      padding-right: 0;
-    }
-  }
-
   &__visit {
-    padding-top: 10px;
+    padding: 10px;
     @include tdn;
     font-size: 21px;
     font-weight: 700;
@@ -29,27 +13,60 @@
   &__social {
     margin-top: 35px;
     margin-bottom: 45px;
-
-    @media #{$tablet-width} {
-      margin-top: 0;
-}
-
-    .social-links {
-      display: flex;
-      justify-content: center;
-
-      &__common {
-        width: 46px;
-        height: 48px;
-        margin-right: 5px;
-        outline: 1px solid black;
-      }
-    }
   }
 
   &__copyright {
-    @media #{$tablet-width} {
+    position: relative;
+    margin-right: 50px;
+    line-height: 40px;
+  }
+
+  &__copyright:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../../img/logo-htmlacademy.svg") 72% 50% no-repeat;
+    background-size: 30px auto;
+  }
+}
+
+@media #{$tablet-width} {
+  .page-footer {
+
+    &__wrapper {
+      width: 90%;
+      margin: 0 auto;
+      padding-left: 35px;
+      padding-right: 77px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__social {
+      margin-top: 0;
+    }
+
+    &__copyright {
       padding-top: 10px;
+    }
+
+    &__copyright:after {
+      top: -15px;
+      right: -65px;
+    }
+  }
+}
+
+@media #{$desctop-width} {
+  .page-footer {
+
+    &__wrapper {
+      width: 80%;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }

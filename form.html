@@ -12,20 +12,24 @@
           <div class="main-nav__wrapper main-nav__wrapper--close">
             <ul class="main-nav__list">
               <li class="main-nav__item"><a href="index.html">Главная</a></li>
-              <li class="main-nav__item"><a href="photo.html">Фото и видео</a></li>
+              <li class="main-nav__item main-nav__item--margin"><a href="photo.html">Фото и видео</a></li>
               <li class="main-nav__item"><a>Форма отзыва</a></li>
               <li class="main-nav__item"><a href="#">Html Academy</a></li>
             </ul>
           </div>
           <span class="main-nav__toggle main-nav__toggle--close">Открыть меню</span>
         </nav>
-        <div class="page-header__logo">
-          <img src="img/logo-sedona-mobile.svg" width="103" height="83" alt="Седона">
-        </div>
+        <a href="index.html" class="page-header__logo">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+            <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Седона">
+          </picture>
+        </a>
       </header>
       <div class="content">
         <div class="content__mini-welcome">
-          <img src="img/bg-back-mobile.jpg" width="320" height="390" alt="">
+          <img src="img/text-sedona.svg" width="460" height="80" alt="">
         </div>
         <section class="intro intro--hide">
           <h1 class="intro__title intro__title--fsize">Оставьте свой отзыв</h1>
@@ -33,32 +37,40 @@
         </section>
         <form class="form" action="/echo" method="post">
           <div class="form__login">
-            <div class="form__title">Представьтесь, пожалуйста:</div>
-            <div class="form__login-name">
-              <label for="name">Имя:</label>
-              <input type="text" name="name" id="name" placeholder="Маргарита">
-            </div>
-            <div class="form__login-surname">
-              <label for="surname">Фамилия:</label>
-              <input type="text" name="surname" id="surname" placeholder="Мунтанион">
-            </div>
-            <div class="form__ligin-middlename">
-              <label for="middle-name">Отчество:</label>
-              <input type="text" name="middle-name" id="middle-name" placeholder="Николаевна">
+            <div class="form__title form__title--login">Представьтесь</div>
+            <div class="form__login-container">
+              <div class="form__login-name">
+                <label for="name">Имя:</label>
+                <input type="text" name="name" id="name" placeholder="Маргарита">
+              </div>
+              <div class="form__login-surname">
+                <label for="surname">Фамилия:</label>
+                <input type="text" name="surname" id="surname" placeholder="Мунтанион">
+              </div>
+              <div class="form__login-middlename">
+                <label for="middle-name">Отчество:</label>
+                <input type="text" name="middle-name" id="middle-name" placeholder="Николаевна">
+              </div>
             </div>
           </div>
-          <div class="form__contacts">
+          <div class="form__contacts form__line">
             <div class="form__title">Контакная информация:</div>
-            <label for="tel">Контактный телефон:</label>
-            <div class="form__icon">
-              <input type="tel" name="tel" id="tel" placeholder="Введите телефон">
-              <label for="tel"></label>
-            </div>
-            <div class="form__error">Ошибка, перепроверьте номер</div>
-            <label for="email">Электронная почта:</label>
-            <div class="form__icon">
-              <input type="email" name="email" id="email" placeholder="Введите e-mail">
-              <label for="email"></label>
+            <div class="form__contacts-wrapper">
+              <div class="form__contacts-tel">
+                <label for="tel"> телефон:</label>
+                <div class="form__icon form__icon--width form__icon--tel">
+                  <input type="tel" name="tel" id="tel" placeholder="Введите телефон">
+                  <!--<label for="icon-tel"></label>-->
+                </div>
+                <div class="form__error">Ошибка, перепроверьте номер</div>
+              </div>
+              <div class="form__contacts-mail">
+                <label for="email">Электронная почта:</label>
+                <div class="form__icon form__icon--mail">
+                  <input type="email" name="email" id="email" placeholder="Введите e-mail">
+                  <!--<label for="email"></label>-->
+                </div>
+              </div>
             </div>
           </div>
           <div class="form__impression">
@@ -78,7 +90,7 @@
               </li>
             </ul>
           </div>
-          <div class="form__attractions">
+          <div class="form__attractions form__line">
             <div class="form__title form__title--width">Посещенные достопримечательности:</div>
             <ul class="form__attractions-list">
               <li>
@@ -89,7 +101,7 @@
                 <input type="checkbox" id="chb-2" checked>
                 <label for="chb-2">Слайд-парк</label>
               </li>
-              <li>
+              <li class="form__attractions-order">
                 <input type="checkbox" id="chb-3">
                 <label for="chb-3">Гора-Колокол</label>
               </li>
@@ -99,24 +111,25 @@
               </li>
             </ul>
           </div>
-          <div class="form__emotions">
+          <div class="form__emotions form__line">
             <div class="form__title">Опишите свои эмоции:</div>
             <label for="textarea"></label>
             <textarea placeholder="Опишите подробно все свои восторги " name="textarea" id="textarea"></textarea>
           </div>
           <button type="submit">Отправить отзыв</button>
+          <span class="form__besure">* &ndash; обязательные поля</span>
         </form>
       </div>
       <footer class="page-footer">
         <div class="page-footer__wrapper">
           <a href="#" class="page-footer__visit">#visitsedona</a>
-          <section class="page-footer__social">
+          <div class="page-footer__social">
             <div class="social-links">
               <a href="#" class="social-links__common social-links__common--tw"></a>
               <a href="#" class="social-links__common social-links__common--fb"></a>
               <a href="#" class="social-links__common social-links__common--yut"></a>
             </div>
-          </section>
+          </div>
           <div class="page-footer__copyright">Разработано</div>
         </div>
       </footer>

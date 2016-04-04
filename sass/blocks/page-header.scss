@@ -1,18 +1,42 @@
 .page-header{
   position: relative;
+  z-index: 10;
 
   &__logo{
+    width: 102px;
+    margin: 0 auto;
+    display: block;
 
-    @media #{$tablet-width} {
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+}
+
+@media #{$tablet-width} {
+  .page-header {
+
+    &__logo {
+      width: auto;
       position: absolute;
       top: 0;
       left: 50%;
       transform: translateX(-50%);
+    }
   }
+}
 
-    img {
-      width: 103px;
-      height: 83px;
+@media #{$desctop-width} {
+  .page-header {
+
+    &__logo {
+
+      img {
+        width: 187px;
+        height: 97px;
+      }
     }
   }
 }
