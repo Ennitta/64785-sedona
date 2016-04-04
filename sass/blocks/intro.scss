@@ -1,39 +1,17 @@
 .intro {
-  width: 280px;
+  position: relative;
+  width: 80%;
   margin-bottom: 25px;
   @include container-fluid;
 
-  @media #{$tablet-width} {
-    margin-bottom: 50px;
-  }
-
   &--hide {
     margin-bottom: 27px;
-
-    @media #{$tablet-width} {
-      margin-bottom: 47px;
-    }
-
-    @media #{$desctop-width} {
-      margin-bottom: 70px;
-    }
   }
 
   &__title {
     font-size: 18px;
     margin: 0 auto;
     margin-bottom: 27px;
-
-    @media #{$tablet-width} {
-      font-size: 21px;
-      width: 445px;
-    }
-    &--fsize {
-      @media #{$tablet-width} {
-        font-size: 30px;
-        margin-bottom: 31px;
-      }
-    }
   }
 
   &__text {
@@ -41,18 +19,51 @@
     margin-right: 20px;
     color: $c_gray;
 
-    @media #{$tablet-width} {
-      margin: 0 auto;
-    }
     &--lineh {
       line-height: 24px;
+    }
+  }
+}
 
-      @media #{$tablet-width} {
-        width: 56%;
+@media #{$tablet-width} {
+  .intro {
+    margin-bottom: 50px;
+
+    &--hide {
+      margin-bottom: 47px;
+    }
+
+    &__title {
+      font-size: 21px;
+      width: 445px;
+
+      &--fsize {
+        font-size: 30px;
+        margin-bottom: 31px;
       }
+    }
 
-      @media #{$desctop-width} {
-        width: 37%;
+    &__text {
+      margin: 0 auto;
+
+      &--lineh {
+        width: 60%;
+      }
+    }
+  }
+}
+
+@media #{$desctop-width} {
+  .intro {
+
+    &--hide {
+      margin-bottom: 70px;
+    }
+
+    &__text {
+
+      &--lineh {
+        width: 41%;
       }
     }
   }
