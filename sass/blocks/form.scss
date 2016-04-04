@@ -273,7 +273,8 @@
       }
 
       &--width {
-        width: 42%;
+        width: 50%;
+        max-width: 400px;
         margin: 0 auto;
       }
     }
@@ -358,8 +359,9 @@
       margin-bottom: 52px;
 
       textarea {
-        width: 95%;
+        width: 100%;
         margin-top: 35px;
+        box-sizing: border-box;
       }
     }
     button {

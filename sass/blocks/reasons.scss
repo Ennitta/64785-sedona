@@ -120,6 +120,7 @@
 
     &__wrapper-width {
       width: calc(100% / 3);
+      display: flex;
     }
 
     &__item {
@@ -133,7 +134,10 @@
     }
 
     &__item-dif {
-      padding-bottom: 30px;
+      min-height: 256px;
+      @include flex-column;
+      justify-content: center;
+      padding: 0;
 
       p {
         width: 66%;
@@ -146,7 +150,7 @@
     }
 
     &__title {
-      width: 60%;
+      width: 40%;
       margin: 8px auto;
       font-size: 21px;
       line-height: 26px;
