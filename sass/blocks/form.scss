@@ -212,15 +212,9 @@
       background-color: #f2f2f2;
     }
   }
-  button {
+  .btn {
     width: 87%;
-    padding: 17px 0;
-    font-size: 21px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: $c_white;
-    background-color: $c_base;
-    border: none;
+    @include btn;
   }
 
   &__besure {
@@ -364,7 +358,7 @@
         box-sizing: border-box;
       }
     }
-    button {
+    .btn {
       width: 50%;
     }
 
@@ -496,16 +490,8 @@
       }
     }
 
-    &__emotions {
-
-      textarea {
-        width: 95%;
-      }
-    }
-
-    button {
+    .btn {
       width: 50%;
-      margin-left: 0;
     }
 
     &__line:before, &__line:after {

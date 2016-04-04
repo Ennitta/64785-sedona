@@ -1,0 +1,21 @@
+@media #{$tablet-width} {
+  .modal-error {
+    width: 400px;
+    height: 350px;
+
+    &__title {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 40px;
+    }
+
+    p {
+      color: $c_gray;
+    }
+
+    .btn {
+      width: 270px;
+      @include btn;
+    }
+  }
+}

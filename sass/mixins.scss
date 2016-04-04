@@ -34,3 +34,14 @@
     max-width: 1200px;
   }
 }
+// кнопка
+@mixin btn () {
+  padding: 17px 0;
+  font-size: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $c_white;
+  background-color: $c_base;
+  border: none;
+}
+
