@@ -6,6 +6,12 @@ var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync");
+var mqpacker = require("css-mqpacker");
+var minify = require("gulp-csso");
+var rename = require("gulp-rename");
+var imagemin = require("gulp-imagemin");
+var svgstore = require("gulp-svgstore");
+var svgmin = require("gulp-svgmin");
 
 gulp.task("style", function () {
   gulp.src("sass/style.scss")
@@ -17,9 +23,14 @@ gulp.task("style", function () {
         "last 2 Chrome versions",
         "last 2 Firefox versions",
         "last 2 Opera versions",
-        "last 2 Edge versions"
-      ]})
+        "last 2 Edge versions"]}),
+      mqpacker({
+        sort: true
+      })
     ]))
+    .pipe(gulp.dest("css"))
+    .pipe(minify())
+    .pipe(rename("style.min.css"))
     .pipe(gulp.dest("css"))
     .pipe(server.reload({stream: true}));
 });
@@ -31,6 +42,25 @@ gulp.task("serve", ["style"], function () {
     open: true,
     ui: false
   });
+
+gulp.task("images", function () {
+  return gulp.src("img/**/*.{png,jpg,gif}")
+    .pipe(imagemin({
+      optimizationLevel: 3,
+      progressive: true
+    }))
+    .pipe(gulp.dest("img"));
+});
+
+gulp.task("symbols", function () {
+  return gulp.src("img/icons/*.svg")
+    .pipe(svgmin())
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("symbols.svg"))
+    .pipe(gulp.dest("img"));
+});
 
   gulp.watch("sass/**/*.{scss,sass}", ["style"]);
   gulp.watch("*.html").on("change", server.reload);
