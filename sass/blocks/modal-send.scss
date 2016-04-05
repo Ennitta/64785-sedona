@@ -5,16 +5,15 @@
 }
 
 @media #{$tablet-width} {
-  .modal-error {
+  .modal-send {
     @include modal;
-    margin-left: -200px;
-    margin-top: -175px;
-    width: 400px;
+    width: 640px;
     height: 350px;
+    margin-left: -320px;
+    margin-top: -175px;
     display: none;
 
     &__title {
-      width: 64%;
       margin-bottom: 30px;
       font-weight: 700;
       font-size: 30px;
@@ -22,15 +21,21 @@
     }
 
     p {
-      width: 70%;
+      width: 65%;
       margin-bottom: 30px;
       line-height: 24px;
       color: $c_gray;
     }
 
     .btn {
-      width: 270px;
+      width: 460px;
       @include btn;
     }
+  }
+}
+
+@media #{$desctop-width} {
+  .modal-send {
+    top: 107%;
   }
 }
