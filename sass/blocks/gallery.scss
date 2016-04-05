@@ -19,7 +19,12 @@
   }
 
   &__item-info {
+    line-height: 24px;
     box-sizing: border-box;
+  }
+
+  &__item-signature {
+    margin-bottom: 9px;
   }
 
   &__discription {
@@ -27,14 +32,12 @@
   }
 
   &__author {
-    margin-bottom: 5px;
     text-transform: none;
     color: $c_gray;
   }
 
   &__like {
     position: relative;
-    padding: 5px;
     padding-left: 35px;
     font-weight: 700;
     text-decoration: none;
@@ -47,7 +50,7 @@
     left: 0;
     width: 30px;
     height: 25px;
-    background: url("../../img/icon-like.svg") left no-repeat;
+    background: url("../img/icon-like.svg") left no-repeat;
     background-size: 22px auto;
   }
 }
@@ -57,6 +60,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
+    @include container-fluid;
 
     &__item {
       width: 50%;
@@ -82,8 +86,12 @@
     &__item-info {
       display: flex;
       justify-content: space-between;
-      padding: 15px;
+      padding: 15px 20px;
       background-color: #f2f2f2;
+    }
+
+    &__item-signature {
+      margin-bottom: 0;
     }
 
     &__like {
@@ -98,6 +106,7 @@
 
 @media #{$desctop-width} {
   .gallery {
+    width: 100%;
 
     &__item {
       width: calc(100% / 3);
@@ -114,7 +123,7 @@
       bottom: 0;
       flex-direction: row;
       justify-content: space-between;
-      padding: 10px 20px;
+      padding: 17px 22px;
       background: rgba(0, 0, 0, 0.3);
       z-index: 10;
     }

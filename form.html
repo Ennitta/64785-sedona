@@ -31,7 +31,7 @@
         <div class="content__mini-welcome">
           <img src="img/text-sedona.svg" width="460" height="80" alt="">
         </div>
-        <section class="intro intro--hide">
+        <section class="intro intro--margin">
           <h1 class="intro__title intro__title--fsize">Оставьте свой отзыв</h1>
           <p class="intro__text intro__text--lineh">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </section>
@@ -74,7 +74,7 @@
             </div>
           </div>
           <div class="form__impression">
-            <div class="form__title">Ваше общее впечатление:</div>
+            <div class="form__title form__title--impres">Ваше общее впечатление:</div>
             <ul class="form__impression-list">
               <li>
                 <input type="radio" name="impres" value="" id="rb-1" checked>
@@ -91,7 +91,7 @@
             </ul>
           </div>
           <div class="form__attractions form__line">
-            <div class="form__title form__title--width">Посещенные достопримечательности:</div>
+            <div class="form__title form__title--attract">Посещенные достопримечательности:</div>
             <ul class="form__attractions-list">
               <li>
                 <input type="checkbox" id="chb-1" checked>
@@ -136,7 +136,15 @@
       <div class="modal-error">
         <div class="modal-error__title">Что-то пошло не так!</div>
         <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-        <button type="submit" class="btn"></button>
+        <button type="submit" class="btn">Ок</button>
+      </div>
+      <div class="modal-send">
+        <div class="modal-send__title">Ваш отзыв оправлен!</div>
+        <p>Спасибо за ваше участие, ваш отзыв уже поступил к нам.
+        В ближайшее время мы опубликуем его на сайте.</p>
+        <div class="modal-send__bg">
+          <button type="submit" class="btn">Закрыть окно</button>
+        </div>
       </div>
     </div>
   </body>

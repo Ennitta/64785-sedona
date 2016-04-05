@@ -37,8 +37,11 @@
       margin-bottom: 32px;
     }
 
+    &__text {
+      margin-bottom: 40px;
+    }
+
     &_motel {
-      margin-top: 41px;
     }
   }
 }
@@ -46,5 +49,9 @@
 @media #{$desctop-width} {
   .interested {
     width: 38%;
+
+    &__text {
+      margin-bottom: 45px;
+    }
   }
 }

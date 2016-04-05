@@ -1,9 +1,8 @@
 .doubt {
   @include container-fluid;
   border-top: 1px solid #e5e5e5;
-  margin-top: -5px;
-  margin-bottom: 32px;
-  padding-top: 37px;
+  margin-bottom: 35px;
+  padding-top: 30px;
 
   &__title{
     font-size: 18px;
@@ -20,21 +19,22 @@
 @media #{$tablet-width} {
   .doubt {
     width: 55%;
-    margin-top: 24px;
-    margin-bottom: 70px;
+    margin-top: 35px;
+    margin-bottom: 73px;
     border-top: none;
-  }
 
-  &__title {
-    margin-bottom: 30px;
-    font-size: 30px;
-    line-height: 30px;
+    &__title {
+      margin-bottom: 30px;
+      font-size: 30px;
+      line-height: 30px;
+    }
   }
 }
 
 @media #{$desctop-width} {
   .doubt {
     width: 35%;
-    margin-top: 33px;
+    margin-top: 37px;
+    margin-bottom: 70px;
   }
 }

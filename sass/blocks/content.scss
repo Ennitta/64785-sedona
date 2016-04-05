@@ -5,28 +5,25 @@
   &__welcome, &__mini-welcome {
     position: relative;
     top: -30px;
-    min-height: 391px;
-    margin-bottom: 40px;
+    min-height: 389px;
     background-color: #e4f1f9;
-    background-image: url("../../img/bg-back-mobile.jpg");
+    background-image: url("../img/bg-back-mobile.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 
     @media (min-resolution: 144dpi),
            (min-resolution: 1.5dppx) {
-      background-image: url("../../img/bg-back-mobile@2x.jpg");
+      background-image: url("../img/bg-back-mobile@2x.jpg");
     }
 
     img {
       position: relative;
-      top: 15%;
+      top: 13%;
       width: 90%;
       min-height: 391px;
       display: block;
       margin: 0 auto;
-      padding-top: 20px;
-      padding-bottom: 20px;
     }
   }
 
@@ -36,18 +33,17 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 72px;
-    background: url(../../img/bg-intro-triangle-mobile.svg) bottom center no-repeat;
+    height: 58px;
+    background: url(../img/bg-intro-triangle-mobile.svg) bottom center no-repeat;
     background-size: cover;
   }
 
   &__mini-welcome {
     min-height: 160px;
     height: 160px;
-    margin-bottom: 7px;
 
     img {
-      top: 5%;
+      top: 20%;
       width: 70%;
       min-height: 80px;
     }
@@ -60,29 +56,25 @@
     &__welcome, &__mini-welcome {
       top: 5px;
       height: 520px;
-      background-image: url("../../img/bg-back-desktop.jpg");
+      background-image: url("../img/bg-back-desktop.jpg");
 
       @media (min-resolution: 144dpi),
              (min-resolution: 1.5dppx) {
-      background-image: url("../../img/bg-back-desktop@2x.jpg");
-      }
-
-      img {
-        padding-top: 0;
+      background-image: url("../img/bg-back-desktop@2x.jpg");
       }
     }
 
     &__welcome:after, &__mini-welcome:after {
-      background: url(../../img/bg-intro-triangle-tablet.svg) bottom center no-repeat;
+      height: 64px;
+      background: url(../img/bg-intro-triangle-tablet.svg) bottom center no-repeat;
       background-size: cover;
     }
 
     &__mini-welcome {
-      height: 300px;
-      margin-bottom: 65px;
+      height: 290px;
 
       img {
-        top: 33%;
+        top: 30%;
       }
     }
   }
@@ -92,12 +84,12 @@
   .content {
 
     &__welcome:after, &__mini-welcome:after {
-      background: url(../../img/bg-intro-triangle-desktop.svg) bottom center no-repeat;
+      background: url(../img/bg-intro-triangle-desktop.svg) bottom center no-repeat;
       background-size: cover;
     }
 
     &__mini-welcome {
-      margin-bottom: 115px;
+      height: 301px;
     }
   }
 }

@@ -52,14 +52,18 @@
     &--login:after {
       content: ", пожалуйста:";
     }
+
+    &--width {
+      margin-bottom: 15px;
+    }
   }
 
   &__contacts {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: left;
 
     label {
-      margin-left: 3%;
+      margin-left: 20px;
       color: $c_gray;
     }
 
@@ -80,8 +84,10 @@
       content: "контактный";
     }
   }
+
   &__icon {
     position: relative;
+    margin-bottom: 7px;
   }
 
   &__icon:before {
@@ -95,21 +101,22 @@
   }
 
   &__icon--tel:before {
-    background: #e6e6e6 url("../../img/icon-phone.svg") 50% 50% no-repeat;
+    background: #e6e6e6 url("../img/icon-phone.svg") 50% 50% no-repeat;
   }
 
   &__icon--mail:before {
-    background: #e6e6e6 url("../../img/icon-mail.svg") 50% 50% no-repeat;
+    background: #e6e6e6 url("../img/icon-mail.svg") 50% 50% no-repeat;
   }
 
   &__error {
     margin-bottom: 11px;
-    margin-left: 3%;
+    margin-left: 20px;
     color: #ff5c5c;
     text-transform: none;
   }
 
   &__impression {
+    margin-bottom: 30px;
     font-size: 18px;
     font-weight: 700;
     text-transform: none;
@@ -117,14 +124,13 @@
   }
 
   &__impression-list {
-    margin-top: 25px;
     @include list-clear;
 
     li {
       position: relative;
-      margin-bottom: 15px;
-      margin-left: 35px;
-      padding: 15px 70px;
+      padding: 15px;
+      padding-left: 77px;
+      margin-bottom: 13px;
     }
 
     input {
@@ -136,8 +142,8 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 55px;
-      height: 55px;
+      width: 56px;
+      height: 56px;
       background-color: $c_icon;
       border-radius: 50%;
     }
@@ -155,6 +161,7 @@
   }
 
   &__attractions {
+    margin-bottom: 39px;
     font-size: 18px;
     font-weight: 700;
     text-transform: none;
@@ -166,11 +173,11 @@
 
     li {
       position: relative;
-      margin-top: 31px;
-      margin-bottom: 54px;
-      margin-left: 35px;
-      padding: 15px 70px;
+      margin-bottom: 24px;
+      padding: 15px;
+      padding-left: 77px;
     }
+
     input {
       display: none;
       margin-right: 40px;
@@ -181,8 +188,8 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 55px;
-      height: 55px;
+      width: 56px;
+      height: 56px;
       background-color: $c_icon;
       border-radius: 10%;
     }
@@ -194,26 +201,30 @@
       left: 15px;
       width: 100%;
       height: 100%;
-      background: url("../../img/icon-tick.svg") left no-repeat;
+      background: url("../img/icon-tick.svg") left no-repeat;
       background-size: 25px auto;
     }
   }
 
   &__emotions {
     margin-top: -13px;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 
     textarea {
-      width: 75%;
-      height: 120px;
+      width: 100%;
+      min-height: 160px;
+      margin-top: -5px;
       padding: 18px;
       font-size: 18px;
+      line-height: 26px;
       font-weight: 700;
       background-color: #f2f2f2;
+      border: none;
+      box-sizing: border-box;
     }
   }
   .btn {
-    width: 87%;
+    width: 100%;
     @include btn;
   }
 
@@ -234,7 +245,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    margin-bottom: 100px;
+    margin-bottom: 89px;
 
     &__login {
       position: relative;
@@ -244,7 +255,9 @@
     }
 
     &__login-container {
-      margin-right: 0;
+      width: 83%;
+      margin: 0;
+      margin-left: 17.5%;
     }
 
     &__login-name {
@@ -252,13 +265,13 @@
     }
 
     &__title {
-      margin-top: 10px;
+      padding: 0;
       font-size: 21px;
       border: none;
 
       &--login {
         width: 80%;
-        margin-left: 20%;
+        margin-left: 17.5%;
         text-align: left;
       }
 
@@ -266,10 +279,15 @@
         content: ":";
       }
 
-      &--width {
+      &--attract {
         width: 50%;
         max-width: 400px;
         margin: 0 auto;
+        margin-top: -13px;
+      }
+
+      &--impres {
+        text-align: left;
       }
     }
 
@@ -277,7 +295,13 @@
       width: 100%;
       @include flex-column;
       margin: 0 auto;
-      margin-bottom: 39px;
+      margin-top: 28px;
+      margin-bottom: 67px;
+
+      label {
+        width: 47%;
+        margin-left: 3%;
+      }
     }
 
     &__contacts-wrapper {
@@ -288,16 +312,11 @@
       display: flex;
       flex-wrap: wrap;
       margin-bottom: 24px;
-
-      label {
-        width: 47%;
-      }
-      input[type="tel"] {
-      }
     }
 
     &__icon {
       width: 100%;
+      margin-bottom: 0;
       order: 3;
     }
 
@@ -312,24 +331,25 @@
       width: 50%;
       margin-bottom: 20px;
       order: -1;
+      border-right: 1px solid #dbdbdb;
     }
 
     &__impression-list {
-      margin-top: 60px;
+      margin-top: 57px;
 
       li {
-        margin-top: 0;
-        margin-bottom: 0;
+        margin-bottom: 22px;
       }
     }
     &__attractions {
       width: 100%;
+      margin-bottom: 30px;
     }
 
     &__attractions-list {
       width: 80%;
-      margin-top: 40px;
       margin-left: 15%;
+      margin-top: 42px;
       padding-bottom: 10px;
       display: flex;
       flex-wrap: wrap;
@@ -339,7 +359,10 @@
         margin: 0 auto;
         margin-bottom: 30px;
         padding: 15px 0;
-        text-align: center;
+      }
+
+      label {
+        padding-left: 77px;
       }
     }
 /* не могу проставить номер правильно
@@ -369,7 +392,7 @@
     &__line:before, &__line:after{
       content: "";
       position: absolute;
-      top: 41px;
+      top: 13px;
       width: 20%;
       height: 1px;
       background-color: #dbdbdb;
@@ -396,6 +419,7 @@
   .form {
     width: 80%;
     margin-top: -40px;
+    margin-bottom: 94px;
 
     &__login-container {
       width: 80%;
@@ -405,6 +429,10 @@
 
       &--login:after {
       content: ", пожалуйста:";
+      }
+
+      &--impres {
+        margin-left: 16.6%;
       }
     }
 
@@ -477,13 +505,13 @@
     }
 
     &__attractions {
-      margin-bottom: 37px;
+      margin-bottom: 25px;
     }
 
     &__attractions-list {
       width: 100%;
       margin: 0 auto;
-      margin-top: 30px;
+      margin-top: 43px;
 
       li {
         width: 25%;

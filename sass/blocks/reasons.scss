@@ -8,26 +8,29 @@
 
 
   &__item {
+    min-height: 191px;
     @include flex-column;
     justify-content: center;
-    padding-bottom: 35px;
-    padding-top: 57px;
     background-color: $c_base;
     color: $c_white;
 
     p {
-      width: 87%;
-      margin: 0 auto;
+      padding: 0 9%;
     }
   }
 
   &__item-dif {
-    width: 100%;
-    padding-top: 30px;
-    padding-bottom: 19px;
+    min-height: 167px;
+    @include flex-column;
+    justify-content: center;
     background-color: $bg_gray;
     color: $c_black;
     border-top: 1px solid #d6d6d6;
+
+    p {
+      padding: 0 10%;
+      line-height: 23px;
+    }
   }
 
   &__title {
@@ -52,14 +55,14 @@
   &__lists {
     @include list-clear;
     text-align: left;
-    padding-bottom: 35px;
+    padding-top: 35px;
+    padding-bottom: 29px;
   }
 
   &__list {
     position: relative;
-    margin-top: 26px;
-    padding-left: 70px;
-    padding-top: 5px;
+    margin-bottom: 28px;
+    padding-left: 63px;
   }
 
   &__list:before {
@@ -73,15 +76,15 @@
   }
 
   &__list--house:before {
-    background: url(../../img/icon-house.svg) center no-repeat;
+    background: url("../img/icon-house.svg") center no-repeat;
   }
 
   &__list--gift:before {
-    background: url(../../img/icon-gift.svg) center no-repeat;
+    background: url("../img/icon-gift.svg") center no-repeat;
   }
 
   &__list--burger:before {
-    background: url(../../img/icon-burger.svg) center no-repeat;
+    background: url("../img/icon-burger.svg") center no-repeat;
   }
 
   &__list-title {
@@ -94,15 +97,20 @@
     color: $c_gray;
   }
 }
-/*не отображает картинку*/
+
 .reasons:before {
   content: "";
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
-  height: 40px;
-  background: url("../../img/bg-triangle.svg") top center no-repeat;
-  background-size: cover;
+  height: 18px;
+  background-image: linear-gradient(to top right,transparent 50%,#fff 50%),
+    linear-gradient(to top left,transparent 50%,#fff 50%);
+  background-size: 51% 100%;
+  background-repeat: no-repeat;
+  background-position: 0 0, 100% 0;
+  z-index: 10;
 }
 
 @media #{$tablet-width} {
@@ -125,12 +133,14 @@
 
     &__item {
       width: calc(100% / 3);
-      padding-top: 0;
-      padding-bottom: 0;
+      margin: 0;
+      padding: 0;
       border-top: none;
 
       p {
-        width: 66%;
+        margin: 0;
+        padding: 0 16%;
+        line-height: 21px;
       }
     }
 
@@ -138,11 +148,13 @@
       min-height: 256px;
       @include flex-column;
       justify-content: center;
-      padding: 0;
+      padding: 0 9%;
+      margin: 0;
+      border-top: none;
 
       p {
-        width: 66%;
-        margin: 0 auto;
+        padding: 0;
+        margin-bottom: 0;
       }
     }
 
@@ -151,14 +163,16 @@
     }
 
     &__title {
-      width: 40%;
-      margin: 8px auto;
+      margin: 0;
+      padding: 0 14%;
       font-size: 21px;
       line-height: 26px;
     }
 
     &__number {
-      margin-bottom: 15px;
+      margin: 0;
+      margin-bottom: 20px;
+      padding-top: 8px;
     }
 
     &__image {
@@ -182,13 +196,13 @@
       display: flex;
       text-align: center;
       padding-bottom: 0;
+      margin-bottom: 31px;
     }
 
     &__list {
       width: 33.3%;
-      padding-top: 120px;
-      padding-bottom: 55px;
-      padding-left: 0;
+      padding: 0;
+      padding-top: 125px;
 
       &--order {
         order: 3;
@@ -213,13 +227,30 @@
       margin-top: 20px;
     }
   }
+
+  .reasons:before {
+    display: none;
+  }
 }
+
+
 
 @media #{$desctop-width} {
   .reasons {
 
+    &__item-dif {
+
+      p {
+        padding: 0 5%;
+      }
+    }
+
+    &__title {
+      padding: 0 27%;
+    }
+
     &__lists {
-      padding-bottom: 85px;
+      padding-bottom: 21px;
     }
   }
 }

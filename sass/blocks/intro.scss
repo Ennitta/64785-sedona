@@ -1,7 +1,8 @@
 .intro {
   position: relative;
   width: 80%;
-  margin-bottom: 25px;
+  margin-top: 9px;
+  margin-bottom: 45px;
   @include container-fluid;
 
   &--hide {
@@ -11,7 +12,7 @@
   &__title {
     font-size: 18px;
     margin: 0 auto;
-    margin-bottom: 27px;
+    margin-bottom: 26px;
   }
 
   &__text {
@@ -27,15 +28,22 @@
 
 @media #{$tablet-width} {
   .intro {
-    margin-bottom: 50px;
+    margin-top: 50px;
+    margin-bottom: 53px;
 
     &--hide {
-      margin-bottom: 47px;
+      margin-top: 78px;
+      margin-bottom: 68px;
+    }
+
+    &--margin {
+      margin-top: 78px;
+      margin-bottom: 75px;
     }
 
     &__title {
-      font-size: 21px;
       width: 445px;
+      font-size: 21px;
 
       &--fsize {
         font-size: 30px;
@@ -47,7 +55,7 @@
       margin: 0 auto;
 
       &--lineh {
-        width: 60%;
+        width: 81%;
       }
     }
   }
@@ -57,7 +65,13 @@
   .intro {
 
     &--hide {
+      margin-top: 115px;
       margin-bottom: 70px;
+    }
+
+    &--margin {
+      margin-top: 115px;
+      margin-bottom: 98px;
     }
 
     &__text {
