@@ -43,6 +43,10 @@ gulp.task("serve", ["style"], function () {
     ui: false
   });
 
+  gulp.watch("sass/**/*.{scss,sass}", ["style"]);
+  gulp.watch("*.html").on("change", server.reload);
+});
+
 gulp.task("images", function () {
   return gulp.src("img/**/*.{png,jpg,gif}")
     .pipe(imagemin({
@@ -60,10 +64,6 @@ gulp.task("symbols", function () {
     }))
     .pipe(rename("symbols.svg"))
     .pipe(gulp.dest("img"));
-});
-
-  gulp.watch("sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("*.html").on("change", server.reload);
 });
 
 
