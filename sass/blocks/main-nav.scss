@@ -21,6 +21,17 @@
       border-top: 1px solid #9ac2db;
       border-bottom: 1px solid #678fa8;
     }
+
+    a:hover {
+      background-color: #669ec0;
+    }
+
+    a:active {
+      background-color: #5496bd;
+      color: $c_white;
+      opacity: 0.3;
+    }
+
   }
 
   &__toggle{
@@ -90,8 +101,32 @@
         border-top: none;
         border-bottom: none;
       }
+
+      a:hover {
+        color: #81b3d2;
+      }
+
+      a:active {
+        color: #cacaca;
+      }
     }
 
+    &__item--active a {
+      color: #766357;
+
+      &:hover {
+        color: #604e43;
+      }
+
+      &:active {
+        color: #dedad8;
+      }
+    }
+/*
+    &__item--active a:hover {
+      color: #604e43;
+    }
+*/
     &__toggle {
       display: none;
     }

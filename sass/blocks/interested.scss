@@ -21,7 +21,22 @@
       display: block;
       padding: 16px 41px;
       @include tdn;
+      font-weight: 700;
       color: $c_white;
+    }
+
+    a:hover {
+      background-color: #669ec0;
+    }
+
+    a:active {
+      background-color: #5496bd;
+      color: $c_white;
+      opacity: 0.3;
+    }
+
+    a:disabled {
+      background-color: #e5e5e5;
     }
   }
 }

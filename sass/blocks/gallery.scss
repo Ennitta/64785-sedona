@@ -43,24 +43,25 @@
     text-decoration: none;
     color: $c_black;
   }
+
   &__like:before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 30px;
-    height: 25px;
-    background: url("../img/icon-like.svg") left no-repeat;
+    width: 22px;
+    height: 20px;
+    background: url("../img/icons/icon-like.svg") left no-repeat;
     background-size: 22px auto;
   }
 }
 
 @media #{$tablet-width} {
   .gallery {
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    @include container-fluid;
 
     &__item {
       width: 50%;
@@ -130,6 +131,10 @@
 
     &__discription, &__author, &__like {
       color: $c_white;
+    }
+
+    &__like:before {
+      top: 0;
     }
   }
 }
