@@ -12,6 +12,7 @@ var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var svgstore = require("gulp-svgstore");
 var svgmin = require("gulp-svgmin");
+var copy = require('gulp-contrib-copy');
 
 gulp.task("style", function () {
   gulp.src("sass/style.scss")
@@ -66,4 +67,10 @@ gulp.task("symbols", function () {
     .pipe(gulp.dest("img"));
 });
 
-
+gulp.task("copy", function () {
+  gulp.src("fonts/**/*.{woff,woff2}",
+          "img/**",
+          "*.html")
+    .pipe(copy())
+    .pipe(gulp.dest("build"));
+});
