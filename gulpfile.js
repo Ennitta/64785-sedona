@@ -69,8 +69,7 @@ gulp.task("symbols", function () {
 
 gulp.task("copy", function () {
   gulp.src("fonts/**/*.{woff,woff2}",
-          "img/**",
-          "*.html")
+          "img/**/*.{png,jpg,gif}")
     .pipe(copy())
     .pipe(gulp.dest("build"));
 });
