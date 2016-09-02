@@ -58,14 +58,14 @@
   &__list {
     position: relative;
     margin-top: 26px;
-    padding-left: 70px;
+    padding-left: 85px;
     padding-top: 5px;
   }
 
   &__list:before {
     content: "";
     position: absolute;
-    top: -20px;
+    top: -5px;
     left: 0;
     width: 75px;
     height: 73px;
@@ -73,15 +73,15 @@
   }
 
   &__list--house:before {
-    background: url(../img/icon-house.svg) center no-repeat;
+    background: url(../img/icons/icon-house.svg) center no-repeat;
   }
 
   &__list--gift:before {
-    background: url(../img/icon-gift.svg) center no-repeat;
+    background: url(../img/icons/icon-gift.svg) center no-repeat;
   }
 
   &__list--burger:before {
-    background: url(../img/icon-burger.svg) center no-repeat;
+    background: url(../img/icons/icon-burger.svg) center no-repeat;
   }
 
   &__list-title {

@@ -3,6 +3,33 @@
   width: auto;
   background-color: $c_base;
 
+  &__wrapper {
+    display: none;
+
+    &--show {
+      display: block;
+    }
+
+    &--close {
+      top: 0;
+      cursor: pointer;
+
+      &:before, &:after {
+        content: "";
+        position: absolute;
+        top: 25px;
+        right: 17px;
+        width: 27px;
+        height: 4px;
+        background-color: #ffffff;
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+        }
+    }
+  }
+
   &__list{
     @include list-clear;
     @include flex-column;
@@ -25,40 +52,22 @@
 
   &__toggle{
     position: absolute;
-    right: 0;
+    top: 16px;
+    right: 28px;
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 23px;
+    height: 21px;
     font-size: 0;
     cursor: pointer;
 
-    &--close:before {
+    &--open:before {
       content: "";
       position: absolute;
-      bottom: 10px;
-      right: 20px;
       width: 23px;
       height: 4px;
       background-color: $c_base;
       box-shadow: 0 8px 0 0 $c_base,
                   0 16px 0 0 $c_base;
-    }
-    &--open {
-      top: 0;
-
-      &:before, &:after {
-        content: "";
-        position: absolute;
-        top: 25px;
-        right: 17px;
-        width: 27px;
-        height: 4px;
-        background-color: #ffffff;
-        transform: rotate(45deg);
-      }
-      &:after {
-        transform: rotate(-45deg);
-        }
     }
   }
 }
@@ -68,6 +77,7 @@
     background-color: $c_white;
 
     &__wrapper {
+      display: block;
       @include container-fluid;
     }
 
