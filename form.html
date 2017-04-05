@@ -17,7 +17,7 @@
               <li class="main-nav__item"><a href="#">Html Academy</a></li>
             </ul>
           </div>
-          <span class="main-nav__toggle main-nav__toggle--close">Открыть меню</span>
+          <a href="#" class="main-nav__toggle main-nav__toggle--open"></a>
         </nav>
         <a href="index.html" class="page-header__logo">
           <picture>
@@ -133,6 +133,23 @@
           <div class="page-footer__copyright">Разработано</div>
         </div>
       </footer>
-    </div>
+    </div><!--
+    <script>
+      var open = document.querySelector (".main-nav__toggle--open");
+      var nav = document.querySelector (".main-nav__wrapper");
+      var close = document.querySelector (".main-nav__wrapper--close");
+      open.addEventListener ("click", function(event) {
+        event.preventDefault();
+        nav.classList.add ("main-nav__wrapper--show");
+        open.classList.remove ("main-nav__toggle--open");
+        open.classList.remove ("main-nav__toggle");
+      });
+      close.addEventListener ("click", function (event) {
+        event.preventDefault();
+        nav.classList.remove ("main-nav__wrapper--show");
+        open.classList.add ("main-nav__toggle--open");
+        open.classList.add ("main-nav__toggle");
+      });
+    </script>-->
   </body>
 </html>
